@@ -4,13 +4,12 @@ from welcome import Welcome
 class Workspace(ft.UserControl):
     def build(self):
 
-        rail = ft.NavigationRail(
+        rail = ft.Container(ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
             min_width=100,
             min_extended_width=400,
             extended=True,
-            expand=True,
             leading=ft.FloatingActionButton(icon=ft.icons.CREATE, text="Add"),
             group_alignment=-0.9,
             destinations=[
@@ -29,7 +28,7 @@ class Workspace(ft.UserControl):
                 ),
             ],
             on_change=lambda e: print("Selected destination:", e.control.selected_index),
-        )
+        ),height=720)
 
         return ft.Row([
             rail,
