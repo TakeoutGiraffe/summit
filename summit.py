@@ -10,6 +10,7 @@ class Workspace(ft.UserControl):
             min_width=100,
             min_extended_width=400,
             extended=True,
+            expand=True,
             leading=ft.FloatingActionButton(icon=ft.icons.CREATE, text="Add"),
             group_alignment=-0.9,
             destinations=[
