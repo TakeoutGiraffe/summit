@@ -7,7 +7,7 @@ class Workspace(ft.UserControl):
 def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
-    page.bgcolor = colors.BLUE_GREY_200
+    page.bgcolor = ft.colors.BLUE_GREY_200
     workspace = Workspace()
     page.add(workspace)
     page.update()
