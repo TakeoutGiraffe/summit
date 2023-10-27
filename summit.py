@@ -4,7 +4,7 @@ from welcome import Welcome
 class Workspace(ft.UserControl):
     def build(self):
 
-        rail = ft.Container(ft.NavigationRail(
+        rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
             min_width=100,
@@ -28,7 +28,7 @@ class Workspace(ft.UserControl):
                 ),
             ],
             on_change=lambda e: print("Selected destination:", e.control.selected_index),
-        ),height=720)
+        )
 
         return ft.Row([
             rail,
@@ -39,7 +39,7 @@ def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
     page.bgcolor = ft.colors.BLUE_GREY_200
-    workspace = Workspace()
+    workspace = ft.Container(Workspace(),height=page.height)
     page.add(workspace)
     page.update()
  
