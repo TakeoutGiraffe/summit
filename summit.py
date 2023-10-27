@@ -2,7 +2,7 @@ import flet as ft
  
 class Workspace(ft.UserControl):
     def build(self):
-        return Text("Hello")
+        return ft.Text("Hello")
 
 def main(page: ft.page):
     page.title = "Summit"
