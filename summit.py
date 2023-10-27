@@ -1,6 +1,6 @@
 import flet as ft
  
-class Workspace(ft.UserControl)
+class Workspace(ft.UserControl):
     def build(self):
         return Text("Hello")
 
