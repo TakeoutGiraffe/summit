@@ -12,7 +12,6 @@ from flet import (
 )
 from sidebar import Sidebar
  
- 
 class AppLayout(Row):
     def __init__(
         self,

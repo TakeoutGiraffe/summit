@@ -14,7 +14,6 @@ from flet import (
     margin,
 )
  
- 
 class Sidebar(UserControl):
  
     def __init__(self, app_layout, page):

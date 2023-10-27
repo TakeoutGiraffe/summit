@@ -11,6 +11,8 @@ from flet import (
     icons,
     margin
 )
+
+from layout import AppLayout
  
 class SummitApp:
     def __init__(self, page: Page):
@@ -36,6 +38,7 @@ class SummitApp:
                 )
             ],
         )
+        self.page.controls.add(AppLayout())
         self.page.appbar = self.appbar
         self.page.update()
 
