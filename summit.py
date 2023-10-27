@@ -39,7 +39,7 @@ def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
     page.bgcolor = ft.colors.BLUE_GREY_200
-    workspace = ft.Container(Workspace(),height=500)
+    workspace = ft.Container(Workspace(),height=1300)
     page.add(workspace)
     page.update()
  
