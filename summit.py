@@ -50,9 +50,6 @@ def main(page: ft.page):
                 items=[
                     ft.PopupMenuItem(text="Item 1"),
                     ft.PopupMenuItem(),  # divider
-                    ft.PopupMenuItem(
-                        text="Checked item", checked=False, on_click=check_item_clicked
-                    ),
                 ]
             ),
         ],
