@@ -9,7 +9,7 @@ class Workspace(ft.UserControl):
             label_type=ft.NavigationRailLabelType.ALL,
             min_width=100,
             min_extended_width=400,
-            extend=True,
+            extended=True,
             leading=ft.FloatingActionButton(icon=ft.icons.CREATE, text="Add"),
             group_alignment=-0.9,
             destinations=[
