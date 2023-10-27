@@ -1,8 +1,12 @@
 import flet as ft
+from welcome import Welcome
  
 class Workspace(ft.UserControl):
     def build(self):
-        return ft.Text("Hello")
+        return ft.Row([
+            ft.Text("SideBar"),
+            Welcome()
+        ])
 
 def main(page: ft.page):
     page.title = "Summit"
