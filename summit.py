@@ -33,6 +33,7 @@ class Workspace(ft.UserControl):
 
         return ft.Row([
             rail,
+            ft.VerticalDivider(),
             Welcome()
         ],expand=True)
 
