@@ -7,10 +7,9 @@ class Workspace(ft.UserControl):
         rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
-            extended=True,
-            expand=True,
             min_width=100,
             min_extended_width=400,
+            extend=True,
             leading=ft.FloatingActionButton(icon=ft.icons.CREATE, text="Add"),
             group_alignment=-0.9,
             destinations=[
@@ -34,7 +33,7 @@ class Workspace(ft.UserControl):
         return ft.Row([
             rail,
             Welcome()
-        ])
+        ],expand=True)
 
 def main(page: ft.page):
     page.title = "Summit"
