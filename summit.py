@@ -10,21 +10,28 @@ class Workspace(ft.UserControl):
             min_width=100,
             min_extended_width=300,
             extended=True,
-            leading=ft.FloatingActionButton(icon=ft.icons.CREATE, text="Add"),
             group_alignment=-0.9,
             destinations=[
                 ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="First"
+                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="API Endpoints"
                 ),
                 ft.NavigationRailDestination(
-                    icon_content=ft.Icon(ft.icons.BOOKMARK_BORDER),
-                    selected_icon_content=ft.Icon(ft.icons.BOOKMARK),
-                    label="Second",
+                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Scripts"
                 ),
                 ft.NavigationRailDestination(
-                    icon=ft.icons.SETTINGS_OUTLINED,
-                    selected_icon_content=ft.Icon(ft.icons.SETTINGS),
-                    label_content=ft.Text("Settings"),
+                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Running Tasks"
+                ),
+                ft.NavigationRailDestination(
+                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Schedules"
+                ),
+                ft.NavigationRailDestination(
+                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Dashboards"
+                ),
+                ft.NavigationRailDestination(
+                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Security"
+                ),
+                ft.NavigationRailDestination(
+                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
                 ),
             ],
             on_change=lambda e: print("Selected destination:", e.control.selected_index),
