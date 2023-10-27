@@ -12,4 +12,4 @@ def main(page: ft.page):
     page.add(workspace)
     page.update()
  
-    flet.app(target=main)
+flet.app(target=main)
