@@ -72,7 +72,7 @@ class Workspace(ft.UserControl):
             ],
             on_change=newScreenSelected,
             )
-        print(Type(self.selectedControl))
+        print(type(self.selectedControl))
         return ft.Row([
             rail,
             ft.VerticalDivider(),
