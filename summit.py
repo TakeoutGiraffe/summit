@@ -6,6 +6,7 @@ from scripts import Scripts
 from security import Security
 from tasks import Tasks
 from settings import Settings
+from dashboards import Dashboards
  
 class Workspace(ft.UserControl):
 
