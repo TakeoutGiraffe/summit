@@ -20,7 +20,7 @@ class Workspace(ft.UserControl):
         self.tasks=Tasks()
         self.settings=Settings()
         self.dashboards=Dashboards()
-        self.selectedControl=Welcome()
+        self.selectedControl=welcome
 
     def build(self):
 
