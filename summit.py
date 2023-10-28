@@ -21,10 +21,8 @@ class Workspace(ft.UserControl):
         self.settings=Settings()
         self.dashboards=Dashboards()
         self.selectedControl=self.welcome
-
-    def build(self):
-
-        def newScreenSelected(e):
+    
+    def newScreenSelected(e):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = self.apiendpoints
@@ -47,6 +45,8 @@ class Workspace(ft.UserControl):
             elif e.control.selected_index == 6:
                 self.selectedControl = self.settings
                 self.update()
+
+    def build(self):
 
         rail = ft.NavigationRail(
             selected_index=0,
@@ -78,14 +78,13 @@ class Workspace(ft.UserControl):
                     icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
                 ),
             ],
-            on_change=newScreenSelected,
+            on_change=self.newScreenSelected,
             )
-        vc = ft.Container(ft.Row([
+        return ft.Row([
             rail,
             ft.VerticalDivider(),
             self.selectedControl
-            ],expand=True))
-        return vc
+            ],expand=True)
 
 
 def main(page: ft.page):
