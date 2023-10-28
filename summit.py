@@ -16,6 +16,7 @@ class Workspace(ft.UserControl):
     def build(self):
 
         def newScreenSelected(e):
+            print e.control.selected_index
             if e.control.selected_index == 0:
                 self.selectedControl = APIEndpoints()
                 self.update()
@@ -25,16 +26,16 @@ class Workspace(ft.UserControl):
             elif e.control.selected_index == 2:
                 self.selectedControl = Tasks()
                 self.update()
-            elif e.control.selected_index == 1:
+            elif e.control.selected_index == 3:
                 self.selectedControl = Schedules()
                 self.update()
-            elif e.control.selected_index == 1:
+            elif e.control.selected_index == 4:
                 self.selectedControl = Dashboards()
                 self.update()
-            elif e.control.selected_index == 1:
+            elif e.control.selected_index == 5:
                 self.selectedControl = Security()
                 self.update()
-            elif e.control.selected_index == 1:
+            elif e.control.selected_index == 6:
                 self.selectedControl = Settings()
                 self.update()
 
