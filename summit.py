@@ -20,19 +20,15 @@ class Workspace(ft.UserControl):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = APIEndpoints()
-                print (self.selectedControl)
                 self.update()
             elif e.control.selected_index == 1:
                 self.selectedControl = Scripts()
-                print (self.selectedControl)
                 self.update()
             elif e.control.selected_index == 2:
                 self.selectedControl = Tasks()
-                print (self.selectedControl)
                 self.update()
             elif e.control.selected_index == 3:
                 self.selectedControl = Schedules()
-                print (self.selectedControl)
                 self.update()
             elif e.control.selected_index == 4:
                 self.selectedControl = Dashboards()
