@@ -16,7 +16,7 @@ class Workspace(ft.UserControl):
     def build(self):
 
         def newScreenSelected(e):
-            print e.control.selected_index
+            print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = APIEndpoints()
                 self.update()
