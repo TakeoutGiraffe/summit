@@ -13,6 +13,7 @@ class Workspace(ft.UserControl):
     def __init__(self,page):
         super().__init__()
         self.selectedControl=Welcome()
+        self.page = page
 
     def build(self):
 
@@ -20,25 +21,25 @@ class Workspace(ft.UserControl):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = APIEndpoints()
-                page.update()
+                self.page.update()
             elif e.control.selected_index == 1:
                 self.selectedControl = Scripts()
-                page.update()
+                self.page.update()
             elif e.control.selected_index == 2:
                 self.selectedControl = Tasks()
-                page.update()
+                self.age.update()
             elif e.control.selected_index == 3:
                 self.selectedControl = Schedules()
-                page.update()
+                self.page.update()
             elif e.control.selected_index == 4:
                 self.selectedControl = Dashboards()
-                page.update()
+                self.page.update()
             elif e.control.selected_index == 5:
                 self.selectedControl = Security()
-                page.update()
+                self.page.update()
             elif e.control.selected_index == 6:
                 self.selectedControl = Settings()
-                page.update()
+                self.page.update()
 
         rail = ft.NavigationRail(
             selected_index=0,
