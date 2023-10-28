@@ -45,7 +45,7 @@ class Workspace(ft.UserControl):
         rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
-            min_width=100,()
+            min_width=100,
             min_extended_width=300,
             extended=True,
             group_alignment=-0.9,
