@@ -13,7 +13,6 @@ class Workspace(ft.UserControl):
     def __init__(self,page):
         super().__init__()
         self.selectedControl=Welcome()
-        self.page = page
 
     def build(self):
 
@@ -21,25 +20,25 @@ class Workspace(ft.UserControl):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = APIEndpoints()
-                self.page.update()
+                update()
             elif e.control.selected_index == 1:
                 self.selectedControl = Scripts()
-                self.page.update()
+                update()
             elif e.control.selected_index == 2:
                 self.selectedControl = Tasks()
-                self.age.update()
+                update()
             elif e.control.selected_index == 3:
                 self.selectedControl = Schedules()
-                self.page.update()
+                update()
             elif e.control.selected_index == 4:
                 self.selectedControl = Dashboards()
-                self.page.update()
+                update()
             elif e.control.selected_index == 5:
                 self.selectedControl = Security()
-                self.page.update()
+                update()
             elif e.control.selected_index == 6:
                 self.selectedControl = Settings()
-                self.page.update()
+                update()
 
         rail = ft.NavigationRail(
             selected_index=0,
@@ -101,7 +100,7 @@ def main(page: ft.page):
     )
     page.title = "Summit"
     page.padding = 0
-    workspace = ft.Container(Workspace(page),height=1300)
+    workspace = ft.Container(Workspace(),height=1300)
     page.add(workspace)
     page.update()
  
