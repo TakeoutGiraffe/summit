@@ -9,8 +9,6 @@ from settings import Settings
  
 class Workspace(ft.UserControl):
 
-    selectedControl=Welcome()
-
     def __init__(self):
         super().__init__()
         self.selectedControl=Welcome()
