@@ -10,7 +10,7 @@ from dashboards import Dashboards
  
 class Workspace(ft.UserControl):
 
-    def __init__(self,page):
+    def __init__(self):
         super().__init__()
         self.selectedControl=Welcome()
 
