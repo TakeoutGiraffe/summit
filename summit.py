@@ -32,12 +32,6 @@ class Workspace(ft.UserControl):
                 selectedControl = Settings()
                 self.update()
 
-        return ft.Row([
-            rail,
-            ft.VerticalDivider(),
-            selectedControl
-        ],expand=True)
-
     def build(self):
 
         selectedControl=Welcome()
@@ -73,6 +67,11 @@ class Workspace(ft.UserControl):
             ],
             on_change=newScreenSelected,
         )
+        return ft.Row([
+            rail,
+            ft.VerticalDivider(),
+            selectedControl
+        ],expand=True)
 
 
 def main(page: ft.page):
