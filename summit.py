@@ -9,37 +9,35 @@ from settings import Settings
  
 class Workspace(ft.UserControl):
 
+    selectedControl=Welcome()
 
     def __init__(self):
         super().__init__()
-        selectedControl=Welcome()
-        
-
-    selectedControl=Welcome()
+        self.selectedControl=Welcome()
 
     def build(self):
 
         def newScreenSelected(e):
             if e.control.selected_index == 0:
-                selectedControl = APIEndpoints()
+                self.selectedControl = APIEndpoints()
                 self.update()
             elif e.control.selected_index == 1:
-                selectedControl = Scripts()
+                self.selectedControl = Scripts()
                 self.update()
             elif e.control.selected_index == 2:
-                selectedControl = Tasks()
+                self.selectedControl = Tasks()
                 self.update()
             elif e.control.selected_index == 1:
-                selectedControl = Schedules()
+                self.selectedControl = Schedules()
                 self.update()
             elif e.control.selected_index == 1:
-                selectedControl = Dashboards()
+                self.selectedControl = Dashboards()
                 self.update()
             elif e.control.selected_index == 1:
-                selectedControl = Security()
+                self.selectedControl = Security()
                 self.update()
             elif e.control.selected_index == 1:
-                selectedControl = Settings()
+                self.selectedControl = Settings()
                 self.update()
 
         rail = ft.NavigationRail(
@@ -77,7 +75,7 @@ class Workspace(ft.UserControl):
         return ft.Row([
             rail,
             ft.VerticalDivider(),
-            selectedControl
+            self.selectedControl
             ],expand=True)
 
 
