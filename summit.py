@@ -1,9 +1,16 @@
 import flet as ft
 from welcome import Welcome
+from apiendpoints import APIEndpoints
+from schedules import Scheules
+from scripts import Scripts
+from security import Security
+from tasks import Tasks
+from settings import Settings
  
 class Workspace(ft.UserControl):
     def build(self):
 
+        selectedControl=Welcome()
         rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
@@ -37,10 +44,33 @@ class Workspace(ft.UserControl):
             on_change=lambda e: print("Selected destination:", e.control.selected_index),
         )
 
+        def newScreenSelected(e):
+            if e.control.selected_index = 0:
+                selectedControl = APIEndpoints()
+                self.update()
+            elif e.control.selected_index = 1:
+                selectedControl = Scripts()
+                self.update()
+            elif e.control.selected_index = 2:
+                selectedControl = Tasks()
+                self.update()
+            elif e.control.selected_index = 1:
+                selectedControl = Schedules()
+                self.update()
+            elif e.control.selected_index = 1:
+                selectedControl = Dashboards()
+                self.update()
+            elif e.control.selected_index = 1:
+                selectedControl = Security()
+                self.update()
+            elif e.control.selected_index = 1:
+                selectedControl = Settings()
+                self.update()
+
         return ft.Row([
             rail,
             ft.VerticalDivider(),
-            Welcome()
+            selectedControl
         ],expand=True)
 
 def main(page: ft.page):
