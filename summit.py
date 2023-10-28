@@ -20,25 +20,25 @@ class Workspace(ft.UserControl):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = APIEndpoints()
-                update()
+                self.update()
             elif e.control.selected_index == 1:
                 self.selectedControl = Scripts()
-                update()
+                self.update()
             elif e.control.selected_index == 2:
                 self.selectedControl = Tasks()
-                update()
+                self.update()
             elif e.control.selected_index == 3:
                 self.selectedControl = Schedules()
-                update()
+                self.update()
             elif e.control.selected_index == 4:
                 self.selectedControl = Dashboards()
-                update()
+                self.update()
             elif e.control.selected_index == 5:
                 self.selectedControl = Security()
-                update()
+                self.update()
             elif e.control.selected_index == 6:
                 self.selectedControl = Settings()
-                update()
+                self.update()
 
         rail = ft.NavigationRail(
             selected_index=0,
