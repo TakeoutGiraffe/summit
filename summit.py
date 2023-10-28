@@ -10,7 +10,7 @@ from dashboards import Dashboards
  
 class Workspace(ft.UserControl):
 
-    def __init__(self):
+    def __init__(self,page):
         super().__init__()
         self.selectedControl=Welcome()
 
@@ -20,25 +20,25 @@ class Workspace(ft.UserControl):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = APIEndpoints()
-                self.update()
+                page.update()
             elif e.control.selected_index == 1:
                 self.selectedControl = Scripts()
-                self.update()
+                page.update()
             elif e.control.selected_index == 2:
                 self.selectedControl = Tasks()
-                self.update()
+                page.update()
             elif e.control.selected_index == 3:
                 self.selectedControl = Schedules()
-                self.update()
+                page.update()
             elif e.control.selected_index == 4:
                 self.selectedControl = Dashboards()
-                self.update()
+                page.update()
             elif e.control.selected_index == 5:
                 self.selectedControl = Security()
-                self.update()
+                page.update()
             elif e.control.selected_index == 6:
                 self.selectedControl = Settings()
-                self.update()
+                page.update()
 
         rail = ft.NavigationRail(
             selected_index=0,
@@ -100,7 +100,7 @@ def main(page: ft.page):
     )
     page.title = "Summit"
     page.padding = 0
-    workspace = ft.Container(Workspace(),height=1300)
+    workspace = ft.Container(Workspace(self),height=1300)
     page.add(workspace)
     page.update()
  
