@@ -12,7 +12,7 @@ class Workspace(ft.UserControl):
 
     def __init__(self):
         super().__init__()
-        self.selectedControl=Welcome()
+        self.selectedControl=APIENdpoints
 
     def build(self):
 
@@ -72,7 +72,7 @@ class Workspace(ft.UserControl):
             ],
             on_change=newScreenSelected,
             )
-        
+        print(self.selectedControl.)
         return ft.Row([
             rail,
             ft.VerticalDivider(),
