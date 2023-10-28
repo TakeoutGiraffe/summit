@@ -12,7 +12,7 @@ class Workspace(ft.UserControl):
 
     def __init__(self):
         super().__init__()
-        self.selectedControl=APIENdpoints
+        self.selectedControl=APIEndpoints()
 
     def build(self):
 
