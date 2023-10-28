@@ -11,7 +11,7 @@ class Workspace(ft.UserControl):
 
 
     def __init__(self):
-        super.__init__()
+        super().__init__()
         selectedControl=Welcome()
         
 
