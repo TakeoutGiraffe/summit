@@ -11,30 +11,31 @@ class Workspace(ft.UserControl):
 
     selectedControl=Welcome()
 
-    def newScreenSelected(e):
-        if e.control.selected_index == 0:
-            selectedControl = APIEndpoints()
-            self.update()
-        elif e.control.selected_index == 1:
-            selectedControl = Scripts()
-            self.update()
-        elif e.control.selected_index == 2:
-            selectedControl = Tasks()
-            self.update()
-        elif e.control.selected_index == 1:
-            selectedControl = Schedules()
-            self.update()
-        elif e.control.selected_index == 1:
-            selectedControl = Dashboards()
-            self.update()
-        elif e.control.selected_index == 1:
-            selectedControl = Security()
-            self.update()
-        elif e.control.selected_index == 1:
-            selectedControl = Settings()
-            self.update()
-
     def build(self):
+
+        def newScreenSelected(e):
+            if e.control.selected_index == 0:
+                selectedControl = APIEndpoints()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Scripts()
+                self.update()
+            elif e.control.selected_index == 2:
+                selectedControl = Tasks()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Schedules()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Dashboards()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Security()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Settings()
+                self.update()
+
         rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
