@@ -9,7 +9,7 @@ from settings import Settings
  
 class Workspace(ft.UserControl):
 
-     def newScreenSelected(e):
+    def newScreenSelected(e):
         if e.control.selected_index == 0:
             selectedControl = APIEndpoints()
             self.update()
@@ -66,7 +66,7 @@ class Workspace(ft.UserControl):
                 ),
             ],
             on_change=newScreenSelected,
-        )
+            )
         return ft.Row([
             rail,
             ft.VerticalDivider(),
