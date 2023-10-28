@@ -9,6 +9,8 @@ from settings import Settings
  
 class Workspace(ft.UserControl):
 
+    selectedControl=Welcome()
+
     def newScreenSelected(e):
         if e.control.selected_index == 0:
             selectedControl = APIEndpoints()
@@ -33,8 +35,6 @@ class Workspace(ft.UserControl):
             self.update()
 
     def build(self):
-
-        selectedControl=Welcome()
         rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
