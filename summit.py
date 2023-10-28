@@ -100,7 +100,7 @@ def main(page: ft.page):
     )
     page.title = "Summit"
     page.padding = 0
-    workspace = ft.Container(Workspace(self),height=1300)
+    workspace = ft.Container(Workspace(page),height=1300)
     page.add(workspace)
     page.update()
  
