@@ -8,6 +8,36 @@ from tasks import Tasks
 from settings import Settings
  
 class Workspace(ft.UserControl):
+
+     def newScreenSelected(e):
+            if e.control.selected_index == 0:
+                selectedControl = APIEndpoints()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Scripts()
+                self.update()
+            elif e.control.selected_index == 2:
+                selectedControl = Tasks()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Schedules()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Dashboards()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Security()
+                self.update()
+            elif e.control.selected_index == 1:
+                selectedControl = Settings()
+                self.update()
+
+        return ft.Row([
+            rail,
+            ft.VerticalDivider(),
+            selectedControl
+        ],expand=True)
+
     def build(self):
 
         selectedControl=Welcome()
@@ -44,34 +74,6 @@ class Workspace(ft.UserControl):
             on_change=newScreenSelected,
         )
 
-        def newScreenSelected(e):
-            if e.control.selected_index == 0:
-                selectedControl = APIEndpoints()
-                self.update()
-            elif e.control.selected_index == 1:
-                selectedControl = Scripts()
-                self.update()
-            elif e.control.selected_index == 2:
-                selectedControl = Tasks()
-                self.update()
-            elif e.control.selected_index == 1:
-                selectedControl = Schedules()
-                self.update()
-            elif e.control.selected_index == 1:
-                selectedControl = Dashboards()
-                self.update()
-            elif e.control.selected_index == 1:
-                selectedControl = Security()
-                self.update()
-            elif e.control.selected_index == 1:
-                selectedControl = Settings()
-                self.update()
-
-        return ft.Row([
-            rail,
-            ft.VerticalDivider(),
-            selectedControl
-        ],expand=True)
 
 def main(page: ft.page):
     page.appbar = ft.AppBar(
