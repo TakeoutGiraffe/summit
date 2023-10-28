@@ -28,7 +28,7 @@ class Workspace(ft.UserControl):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = self.apiendpoints
-                self.update()
+                vc.update()
             elif e.control.selected_index == 1:
                 self.selectedControl = self.scripts
                 self.update()
@@ -80,12 +80,12 @@ class Workspace(ft.UserControl):
             ],
             on_change=newScreenSelected,
             )
-        print(type(self.selectedControl))
-        return ft.Row([
+        vc = Container(t.Row([
             rail,
             ft.VerticalDivider(),
             self.selectedControl
-            ],expand=True)
+            ],expand=True))
+        return vc
 
 
 def main(page: ft.page):
