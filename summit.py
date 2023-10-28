@@ -41,7 +41,7 @@ class Workspace(ft.UserControl):
                     icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
                 ),
             ],
-            on_change=lambda e: print("Selected destination:", e.control.selected_index),
+            on_change=newScreenSelected,
         )
 
         def newScreenSelected(e):
