@@ -80,7 +80,7 @@ class Workspace(ft.UserControl):
             ],
             on_change=newScreenSelected,
             )
-        vc = ft.Container(t.Row([
+        vc = ft.Container(ft.Row([
             rail,
             ft.VerticalDivider(),
             self.selectedControl
