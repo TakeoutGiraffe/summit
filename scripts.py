@@ -12,27 +12,27 @@ def get_scripts_view():
         ft.IconButton(
                     icon=ft.icons.PAUSE_CIRCLE_FILLED_ROUNDED,
                     icon_color="blue400",
-                    icon_size=20,
+                    icon_size=40,
                     tooltip="Pause record",
                 ),
         ft.IconButton(
                     icon=ft.icons.PAUSE_CIRCLE_FILLED_ROUNDED,
                     icon_color="blue400",
-                    icon_size=20,
+                    icon_size=40,
                     tooltip="Pause record",
                 ),
     ])
     table.columns = [
         ft.DataColumn(ft.Text('ID')),
         ft.DataColumn(ft.Text('Script Name')),
-        ft.DataColumn(tools)
+        ft.DataColumn(ft.Text("Tools"))
     ]
     for script in scripts:
         table.rows.append(ft.DataRow(
             cells=[
                 ft.DataCell(ft.Text(script[0])),
                 ft.DataCell(ft.Text(script[1])),
-                ft.DataCell(ft.Text(""))
+                ft.DataCell(tools)
             ]
         ))
     return ft.Column([header,ft.Divider(),table,footer],expand=True)
