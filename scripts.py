@@ -5,7 +5,7 @@ from scripteditor import ScriptEditorView
 class ScriptsView(ft.Column):
 
     def new_script_clicked(self,e):
-        sev=ScriptEditorView()
+        sev=ScriptEditorView(e.data)
 
     def edit_script_clicked(self,e):
         print(e)
@@ -25,7 +25,13 @@ class ScriptsView(ft.Column):
         footer = ft.Row([
             ft.ElevatedButton("New Script", on_click=self.new_script_clicked)   
         ])
-        tools = ft.Row([
+        table.columns = [
+            ft.DataColumn(ft.Text('ID')),
+            ft.DataColumn(ft.Text('Script Name')),
+            ft.DataColumn(ft.Text("Tools"))
+        ]
+        for script in scripts:
+            tools = ft.Row([
             ft.IconButton(
                         icon=ft.icons.PLAY_ARROW,
                         icon_color="green",
@@ -37,6 +43,7 @@ class ScriptsView(ft.Column):
                         icon_color="blue400",
                         icon_size=40,
                         tooltip="Edit Script",
+                        data=script[0]
                         on_click=self.edit_script_clicked
                     ),
             ft.IconButton(
@@ -46,12 +53,6 @@ class ScriptsView(ft.Column):
                         tooltip="Delete Script",
                     ),
         ])
-        table.columns = [
-            ft.DataColumn(ft.Text('ID')),
-            ft.DataColumn(ft.Text('Script Name')),
-            ft.DataColumn(ft.Text("Tools"))
-        ]
-        for script in scripts:
             table.rows.append(ft.DataRow(
                 cells=[
                     ft.DataCell(ft.Text(script[0])),
