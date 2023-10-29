@@ -16,8 +16,8 @@ class Application(ft.UserControl):
 
     def switch_view(self,view):
        self.selectedView=view
-       self.page.update()
        self.update()
+       view.update()
 
     def open_editor(e):
         print("clicky click")
