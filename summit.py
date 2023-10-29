@@ -10,7 +10,7 @@ from dashboards import Dashboards
  
 class Workspace(ft.UserControl):
 
-    def __init__(self,Page:page):
+    def __init__(self):
         super().__init__()
         self.welcome=Welcome()
         self.apiendpoints=APIEndpoints()
