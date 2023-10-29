@@ -8,7 +8,7 @@ class ScriptsView(ft.Column):
         sev=ScriptEditorView()
         parent.switch_view(sev)
 
-    def __init__(self):
+    def __init__(self,parent):
         super().__init__()
         self.parent = parent
         header = ft.Text("Scripts",size=36)
