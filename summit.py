@@ -12,7 +12,7 @@ class Application(ft.UserControl):
     def __init__(self,page:ft.page):
         super().__init__(self)
         self.page=page
-        self.selectedView=Welcome()
+        self.selectedView=WelcomeView()
 
     def switch_view(self,view):
        self.selectedView=view
