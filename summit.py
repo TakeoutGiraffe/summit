@@ -10,7 +10,7 @@ import dashboards
  
 def main(page: ft.page):
 
-    def newScreenSelected(e):
+    def new_screen_selected(e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
                 page.remove_at(0)
@@ -44,7 +44,7 @@ def main(page: ft.page):
             elif e.control.selected_index == 6:
                 print ("Settings")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),get_settings_view,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_settings_view(),],expand=True)))
                 page.update()
 
     rail = ft.NavigationRail(
@@ -77,7 +77,7 @@ def main(page: ft.page):
                     icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
                 ),
             ],
-            on_change=newScreenSelected,
+            on_change=new_screen_selected,
             )
 
     page.appbar = ft.AppBar(
