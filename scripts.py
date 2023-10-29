@@ -32,7 +32,7 @@ def get_scripts_view():
             cells=[
                 ft.DataCell(ft.Text(script[0])),
                 ft.DataCell(ft.Text(script[1])),
-                ft.DataCell(tools)
+                ft.DataCell(ft.Text(""))
             ]
         ))
     return ft.Column([header,ft.Divider(),table,footer],expand=True)
