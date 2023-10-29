@@ -5,11 +5,12 @@ from scripteditor import ScriptEditorView
 class ScriptsView(ft.Column):
 
     def new_script_clicked(self,e):
-        sev=ScriptEditorView(e.data)
-        parent.switch_view(sev)
+        
 
     def edit_script_clicked(self,e):
         print(e)
+        sev=ScriptEditorView(e.data)
+        parent.switch_view(sev)
 
     def __init__(self,parent):
         super().__init__()
