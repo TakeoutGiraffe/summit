@@ -23,15 +23,15 @@ def config(filename='database.ini', section='postgresql'):
 def connect(): 
     """ Connect to the PostgreSQL database server """
     conn = None
-    try: 
-        # read connection parameters 
-        params = config() 
+
+    # read connection parameters 
+    params = config() 
   
-        # connect to the PostgreSQL server 
-        print('Connecting to the PostgreSQL database...') 
-        conn = psycopg2.connect(**params) 
+    # connect to the PostgreSQL server 
+    print('Connecting to the PostgreSQL database...') 
+    conn = psycopg2.connect(**params) 
           
-        return conn()
+    return conn()
        
   
 def get_query(query):
