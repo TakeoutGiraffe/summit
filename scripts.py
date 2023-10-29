@@ -11,4 +11,4 @@ class Scripts(ft.UserControl):
         lv = ft.ListView()
         for script in self.scripts:
             lv.controls.append(ft.Text(script[1]))
-        return ft.Container(lv)
+        return lv
