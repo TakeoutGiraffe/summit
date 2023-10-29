@@ -46,4 +46,5 @@ def get_scripts():
     return get_query("SELECT * FROM Scripts")
   
 if __name__ == '__main__': 
-    connect()
+    k = get_scripts();
+    print(k)
