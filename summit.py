@@ -8,11 +8,7 @@ from tasks import TasksView
 from welcome import WelcomeView
 import flet as ft
  
-class Application(ft.View):
-    def __init__(self,page:ft.page):
-        super().__init__(self)
-        self.page=page
-        self.selectedView=WelcomeView()
+class Application(ft.Row):
 
     def switch_view(self,view):
        self.selectedView=view
@@ -37,9 +33,11 @@ class Application(ft.View):
             elif e.control.selected_index == 6:
                 self.switch_view(SettingsView())
 
-    def build(self):
-        print ("build")
-        rail = ft.NavigationRail(
+    def __init__(self,page:ft.page):
+        super().__init__(self)
+        self.page=page
+        self.selectedView=WelcomeView()
+         rail = ft.NavigationRail(
                 selected_index=0,
                 label_type=ft.NavigationRailLabelType.ALL,
                 min_width=100,
@@ -96,6 +94,10 @@ class Application(ft.View):
             ft.VerticalDivider(),
             self.selectedView,
             ],height=700)
+
+    
+
+       
  
 def main(page: ft.page):
     page.title = "Summit"
