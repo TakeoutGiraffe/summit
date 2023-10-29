@@ -8,12 +8,14 @@ from tasks import TasksView
 from welcome import WelcomeView
 import flet as ft
  
-def main(page: ft.page):
+class Application:
+    def __init__(page):
+        self.page=page
 
     def switch_view(view):
-        page.remove_at(0)
-        page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
-        page.update()
+        self.page.remove_at(0)
+        self.page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
+        self.page.update()
 
     def open_editor(e):
         print("clicky click")
@@ -67,7 +69,7 @@ def main(page: ft.page):
             on_change=new_screen_selected,
             )
 
-    page.appbar = ft.AppBar(
+    pself.page.appbar = ft.AppBar(
         leading=ft.Icon(ft.icons.PALETTE),
         leading_width=40,
         title=ft.Text("AppBar Example"),
@@ -84,13 +86,16 @@ def main(page: ft.page):
             ),
         ],
     )
-    page.title = "Summit"
-    page.padding = 0
-    page.add(ft.Row([
+    self.page.title = "Summit"
+    self.page.padding = 0
+    self.page.add(ft.Row([
         rail,
         ft.VerticalDivider(),
         WelcomeView(),
         ],expand=True))
-    page.update()
+    self.page.update()
  
+def main(page: ft.page):
+    return Applcation()
+
 ft.app(target=main)
