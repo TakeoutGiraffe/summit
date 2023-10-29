@@ -7,4 +7,7 @@ class Scripts(ft.UserControl):
         self.scripts = db.get_scripts()
 
     def build(self):
-        return ft.Text(self.scripts)
+        rv = ft.Column()
+        for x in self.scripts:
+            rv.add(ft.Text((script[0]))
+        return rv
