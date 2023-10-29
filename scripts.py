@@ -47,7 +47,7 @@ class ScriptsView(ft.Column):
         footer = ft.Row([
             ft.ElevatedButton("New Script", on_click=self.new_script_clicked)   
         ])
-        table = ListView()
+        table = ft.ListView()
 
         for script in scripts:
             table.contents.append(ScriptItem(self.parent, scripts[0], scripts[1]))
