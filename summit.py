@@ -53,7 +53,6 @@ class Workspace(ft.UserControl):
                 self.update()
 
     def build(self):
-        super().build(self)
         print("Updating")
         rail = ft.NavigationRail(
             selected_index=0,
