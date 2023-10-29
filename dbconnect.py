@@ -28,13 +28,13 @@ def connect():
     params = config() 
   
     # connect to the PostgreSQL server 
-    print('Connecting to the PostgreSQL database...') 
     conn = psycopg2.connect(**params) 
           
     return conn
        
   
 def get_query(query):
+    Print(Query)
     conn=connect()
     cur=conn.cursor()
     cur.execute(query)
