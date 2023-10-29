@@ -22,38 +22,38 @@ def main(page: ft.page):
     def newScreenSelected(e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
-                page.remove_at(2)
-                page.add(apiendpoints)
+                page.remove_at(0)
+                page.add((ft.Row([rail,ft.VerticalDivider(),apiendpoints,],expand=True)))
                 page.update()
             elif e.control.selected_index == 1:
                 print ("Scripts")
-                page.remove_at(2)
-                page.add(scripts)
+                page.remove_at(0)
+                page.add((ft.Row([rail,ft.VerticalDivider(),scripts,],expand=True)))
                 page.update()
             elif e.control.selected_index == 2:
                 print ("Tasks")
-                page.remove_at(2)
-                page.add(tasks)
+                page.remove_at(0)
+                page.add((ft.Row([rail,ft.VerticalDivider(),tasks,],expand=True)))
                 page.update()
             elif e.control.selected_index == 3:
                 print ("Schedules")
-                page.remove_at(2)
-                page.add(schedules)
+                page.remove_at(0)
+                page.add((ft.Row([rail,ft.VerticalDivider(),schedules,],expand=True)))
                 page.update()
             elif e.control.selected_index == 4:
                 print ("Dashboards")
-                page.remove_at(2)
-                page.add(dashboards)
+                page.remove_at(0)
+                page.add((ft.Row([rail,ft.VerticalDivider(),dashboards,],expand=True)))
                 page.update()
             elif e.control.selected_index == 5:
                 print ("Security")
-                page.remove_at(2)
-                page.add(security)
+                page.remove_at(0)
+                page.add((ft.Row([rail,ft.VerticalDivider(),security,],expand=True)))
                 page.update()
             elif e.control.selected_index == 6:
                 print ("Settings")
-                page.remove_at(2)
-                page.add(settings)
+                page.remove_at(0)
+                page.add((ft.Row([rail,ft.VerticalDivider(),settings,],expand=True)))
                 page.update()
 
     rail = ft.NavigationRail(
