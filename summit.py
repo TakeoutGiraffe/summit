@@ -10,42 +10,29 @@ import dashboards as dv
  
 def main(page: ft.page):
 
+    def switch_view(view):
+        page.remove_at(0)
+        page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
+        page.update()
+
+    def open_editor(e);
+        print("clicky click")
+
     def new_screen_selected(e):
             if e.control.selected_index == 0:
-                print ("API Endpoints")
-                page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),av.get_api_endpoints_view(),],expand=True)))
-                page.update()
+                switch_view(av.get_api_endpoints_view())
             elif e.control.selected_index == 1:
-                print ("Scripts")
-                page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),scv.get_scripts_view(),],expand=True)))
-                page.update()
+                switch_view(scv.get_scripts_view(self))
             elif e.control.selected_index == 2:
-                print ("Tasks")
-                page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),tv.get_tasks_view(),],expand=True)))
-                page.update()
+                switch_view(tv.get_tasks_view())
             elif e.control.selected_index == 3:
-                print ("Schedules")
-                page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),sv.get_schedules_view(),],expand=True)))
-                page.update()
+                switch_view(sv.get_schedules_view())
             elif e.control.selected_index == 4:
-                print ("Dashboards")
-                page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),dv.get_dashboards_view(),],expand=True)))
-                page.update()
+                switch_view(dv.get_dashboards_view())
             elif e.control.selected_index == 5:
-                print ("Security")
-                page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),secv.get_security_view(),],expand=True)))
-                page.update()
+                switch_view(secv.get_security_view())
             elif e.control.selected_index == 6:
-                print ("Settings")
-                page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),xv.get_settings_view(),],expand=True)))
-                page.update()
+                switch_view(xv.get_settings_view())
 
     rail = ft.NavigationRail(
             selected_index=0,

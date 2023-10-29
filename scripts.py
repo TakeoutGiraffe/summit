@@ -1,7 +1,7 @@
 import flet as ft
 import dbconnect as db
 
-def get_scripts_view():
+def get_scripts_view(parent):
     header = ft.Container(ft.Text("Scripts",size=36))
     scripts = db.get_scripts()
     table = ft.DataTable(
@@ -12,7 +12,7 @@ def get_scripts_view():
         horizontal_lines=ft.border.BorderSide(1, "black"),
     )
     footer = ft.Row([
-        ft.ElevatedButton("New Script")   
+        ft.ElevatedButton("New Script",on_click=parent.open_editor)   
     ])
     tools = ft.Row([
         ft.IconButton(
