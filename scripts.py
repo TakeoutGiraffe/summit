@@ -9,7 +9,7 @@ class Scripts(ft.UserControl):
         #self.height=height
 
     def build(self):
-        lv = ft.ListView()
-        for script in self.scripts:
-            lv.controls.append(ft.Text(script[1]))
-        return ft.Container(ft.Column([Text("Scripts"),Text("Hello"),],expand=True))
+        #lv = ft.ListView()
+       # for script in self.scripts:
+        #    lv.controls.append(ft.Text(script[1]))
+        return ft.Column([Text("Scripts"),Text("Hello"),],expand=True)
