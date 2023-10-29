@@ -21,7 +21,7 @@ class ScriptsView(ft.Column):
             horizontal_lines=ft.border.BorderSide(1, "black"),
         )
         footer = ft.Row([
-            ft.ElevatedButton("New Script")   
+            ft.ElevatedButton("New Script", on_click=self.new_script_clicked)   
         ])
         tools = ft.Row([
             ft.IconButton(
