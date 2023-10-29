@@ -2,7 +2,7 @@ import flet as ft
 import dbconnect as db
 from scripteditor import ScriptEditorView
 
-class ScripstItem(ft.Row):
+class ScriptItem(ft.Row):
 
     def __init__(self,parent,id,name):
         self.id = id
@@ -50,5 +50,5 @@ class ScriptsView(ft.Column):
         table = ListView()
 
         for script in scripts:
-            table.contents.append(ScriptsItem(self.parent, scripts[0], scripts[1]))
+            table.contents.append(ScriptItem(self.parent, scripts[0], scripts[1]))
         self.controls=[header,ft.Divider(),table,footer]
