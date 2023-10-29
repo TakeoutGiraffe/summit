@@ -6,5 +6,5 @@ def get_scripts_view():
     scripts = db.get_scripts()
     lv = ft.ListView()
     for script in scripts:
-        lv.controls.append(Text(script[1]))
+        lv.controls.append(ft.Text(script[1]))
     return ft.Column([header,lv,],expand=True)
