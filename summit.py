@@ -11,7 +11,7 @@ import flet as ft
 class Application(ft.Row):
 
     def switch_view(self,view):
-       self.controls.remove[2]
+       self.controls.remove(2)
        self.controls.append(view) 
        self.page.update()
 
