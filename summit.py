@@ -93,7 +93,7 @@ class Application(ft.UserControl):
         return ft.Row([
             rail,
             ft.VerticalDivider(),
-            self.selectedView,
+            WelcomeView(),
             ],height=700)
  
 def main(page: ft.page):
