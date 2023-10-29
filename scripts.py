@@ -8,6 +8,6 @@ class Scripts(ft.UserControl):
 
     def build(self):
         rv = ft.Column()
-        for x in self.scripts:
-            rv.add(ft.Text(script[0]))
+        for script in self.scripts:
+            rv.add(ft.Text(script[1]))
         return rv
