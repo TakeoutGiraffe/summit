@@ -34,7 +34,7 @@ def connect():
        
   
 def get_query(query):
-    Print(Query)
+    print(query)
     conn=connect()
     cur=conn.cursor()
     cur.execute(query)
