@@ -12,4 +12,4 @@ class Scripts(ft.UserControl):
         lv = ft.ListView(height=700)
         for script in self.scripts:
             lv.controls.append(ft.Text(script[1]))
-        return ft.Container(lv,bgcolor=ft.colors.red,expand=True)
+        return ft.Container(lv,bgcolor=ft.colors.red)
