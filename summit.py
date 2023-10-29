@@ -8,7 +8,7 @@ from tasks import TasksView
 from welcome import WelcomeView
 import flet as ft
  
-class Application:
+class Application(ft.UserControl):
     def __init__(self,page):
         super().__init__(self)
         self.page=page
@@ -87,16 +87,18 @@ class Application:
             ),
         ],
     )
-    self.page.title = "Summit"
-    self.page.padding = 0
-    self.page.add(ft.Row([
-        rail,
-        ft.VerticalDivider(),
-        WelcomeView(),
-        ],expand=True))
-    self.page.update()
+
+    def build(Self):
+        return ft.Row([
+            rail,
+            ft.VerticalDivider(),
+            WelcomeView(),
+            ],expand=True))
  
 def main(page: ft.page):
-    return Applcation(page)
+    page.title = "Summit"
+    page.padding = 0
+    page.add(Applcation(page))
+    page.update()
 
 ft.app(target=main)
