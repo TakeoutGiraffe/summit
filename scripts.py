@@ -6,6 +6,7 @@ class ScriptsView(ft.Column):
 
     def new_script_clicked(self,e):
         sev=ScriptEditorView(e.data)
+        parent.switch_view(sev)
 
     def edit_script_clicked(self,e):
         print(e)
