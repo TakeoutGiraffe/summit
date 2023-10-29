@@ -22,7 +22,7 @@ def main(page: ft.page):
             if e.control.selected_index == 0:
                 switch_view(APIEndpointsView())
             elif e.control.selected_index == 1:
-                switch_view(ScriptsView())
+                switch_view(ScriptsView(self))
             elif e.control.selected_index == 2:
                 switch_view(TasksView())
             elif e.control.selected_index == 3:
