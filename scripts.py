@@ -6,9 +6,9 @@ def get_scripts_view():
     scripts = db.get_scripts()
     table = ft.DataTable()
     tools = ft.Row([
-        ft.IconButton   
+        ft.ElevatedButton("New Script")   
     ])
-    footer = ft.Row([
+    tools = ft.Row([
         ft.IconButton(
                     icon=ft.icons.PAUSE_CIRCLE_FILLED_ROUNDED,
                     icon_color="blue400",
