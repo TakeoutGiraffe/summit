@@ -47,7 +47,7 @@ class ScriptsView(ft.Column):
                         icon_size=40,
                         tooltip="Edit Script",
                         data=script[1],
-                        on_click=edit_script_clicked
+                        on_click=self.edit_script_clicked
                     ),
             ft.IconButton(
                         icon=ft.icons.DELETE,
