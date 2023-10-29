@@ -2,16 +2,15 @@ import flet as ft
 import dbconnect as db
 from scripteditor import ScriptEditorView
 
-class ScriptsView(ft.UserControl):
-
-    def __init__(self, parent):
-        self.parent = parent
+class ScriptsView():
 
     def new_script_clicked():
         sev=ScriptEditorView()
         parent.switch_view(sev)
 
-    def build(self):
+    def __init__(self, parent):
+        self.parent = parent
+
         header = ft.Container(ft.Text("Scripts",size=36))
         scripts = db.get_scripts()
         table = ft.DataTable(

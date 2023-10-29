@@ -1,5 +1,6 @@
 import flet as ft
 
 class WelcomeView(ft.UserControl):
-    def build(self):
+    def __init__(self):
+        super().__init__()
         return ft.Text("Welcome")
