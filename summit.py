@@ -8,7 +8,7 @@ from tasks import TasksView
 from welcome import WelcomeView
 import flet as ft
  
-class Application(ft.UserControl):
+class Application(ft.View):
     def __init__(self,page:ft.page):
         super().__init__(self)
         self.page=page
