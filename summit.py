@@ -68,7 +68,7 @@ class Application(ft.UserControl):
                         icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
                     ),
                 ],
-                on_change=new_screen_selected,
+                on_change=self.new_screen_selected,
                 )
 
         self.page.appbar = ft.AppBar(
