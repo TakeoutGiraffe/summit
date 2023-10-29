@@ -22,37 +22,37 @@ def main(page: ft.page):
     def newScreenSelected(e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
-                page.remove(2)
+                page.remove_at(2)
                 page.add(apiendpoints)
                 page.update()
             elif e.control.selected_index == 1:
                 print ("Scripts")
-                page.remove(2)
+                page.remove_at(2)
                 page.add(scripts)
                 page.update()
             elif e.control.selected_index == 2:
                 print ("Tasks")
-                page.remove(2)
+                page.remove_at(2)
                 page.add(tasks)
                 page.update()
             elif e.control.selected_index == 3:
                 print ("Schedules")
-                page.remove(2)
+                page.remove_at(2)
                 page.add(schedules)
                 page.update()
             elif e.control.selected_index == 4:
                 print ("Dashboards")
-                page.remove(2)
+                page.remove_at(2)
                 page.add(dashboards)
                 page.update()
             elif e.control.selected_index == 5:
                 print ("Security")
-                page.remove(2)
+                page.remove_at(2)
                 page.add(security)
                 page.update()
             elif e.control.selected_index == 6:
                 print ("Settings")
-                page.remove(2)
+                page.remove_at(2)
                 page.add(settings)
                 page.update()
 
