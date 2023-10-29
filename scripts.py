@@ -55,7 +55,7 @@ class ScriptsView(ft.Column):
                         icon_size=40,
                         tooltip="Delete Script",
                     ),
-        ])
+            ])
             table.rows.append(ft.DataRow(
                 cells=[
                     ft.DataCell(ft.Text(script[0])),
