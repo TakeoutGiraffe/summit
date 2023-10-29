@@ -94,7 +94,7 @@ class Application(ft.UserControl):
             rail,
             ft.VerticalDivider(),
             WelcomeView(),
-            ],expand=True)
+            ],height=700)
  
 def main(page: ft.page):
     page.title = "Summit"
