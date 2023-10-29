@@ -17,6 +17,7 @@ class Application(ft.UserControl):
     def switch_view(self,view):
        self.selectedView=view
        self.page.update()
+       self.update()
 
     def open_editor(e):
         print("clicky click")
@@ -33,7 +34,7 @@ class Application(ft.UserControl):
             elif e.control.selected_index == 4:
                 self.switch_view(DashboardView())
             elif e.control.selected_index == 5:
-                self.switch_view(SecuityView())
+                self.switch_view(SecurityView())
             elif e.control.selected_index == 6:
                 self.switch_view(SettingsView())
 
