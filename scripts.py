@@ -10,7 +10,7 @@ class ScriptsView(ft.Column):
 
     def __init__(self, parent):
         self.parent = parent
-        header = ft.Container(ft.Text("Scripts",size=36))
+        header = ft.Text("Scripts",size=36)
         #scripts = db.get_scripts()
         #table = ft.DataTable(
         #    bgcolor="white",
