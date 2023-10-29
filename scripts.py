@@ -10,16 +10,22 @@ def get_scripts_view():
     ])
     tools = ft.Row([
         ft.IconButton(
-                    icon=ft.icons.PAUSE_CIRCLE_FILLED_ROUNDED,
-                    icon_color="blue400",
+                    icon=ft.icons.PLAY,
+                    icon_color="green",
                     icon_size=40,
-                    tooltip="Pause record",
+                    tooltip="Run Script",
                 ),
         ft.IconButton(
-                    icon=ft.icons.PAUSE_CIRCLE_FILLED_ROUNDED,
+                    icon=ft.icons.EDIT,
                     icon_color="blue400",
                     icon_size=40,
-                    tooltip="Pause record",
+                    tooltip="Edit Script",
+                ),
+        ft.IconButton(
+                    icon=ft.icons.DELETE,
+                    icon_color="red",
+                    icon_size=40,
+                    tooltip="Delete Script",
                 ),
     ])
     table.columns = [
