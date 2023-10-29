@@ -7,4 +7,4 @@ class ScriptEditorView(ft.Column):
         super().__init__()
         script=db.get_script_with_id(script_id)
 
-        self.controls=[ ft.Text(scipt[2])]
+        self.controls=[ ft.Text(script[2])]
