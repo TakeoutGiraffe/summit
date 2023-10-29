@@ -13,7 +13,7 @@ class Application(ft.UserControl):
         super().__init__(self)
         self.page=page
 
-    def switch_view(self.view):
+    def switch_view(self,view):
         self.page.remove_at(0)
         self.page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
         self.page.update()
