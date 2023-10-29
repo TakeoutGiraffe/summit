@@ -7,4 +7,5 @@ class ScriptEditorView(ft.Column):
         super().__init__()
         script=db.get_script_with_id(script_id)[0]
 
-        self.controls=[ ft.Text(script[2])]
+        footer = ft.Row([ft.ElevatedButton("New Script", on_click=self.new_script_clicked)  ])
+        self.controls=[header, script_text, footer]
