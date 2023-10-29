@@ -15,7 +15,7 @@ def main(page: ft.page):
         page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
         page.update()
 
-    def open_editor(e);
+    def open_editor(e):
         print("clicky click")
 
     def new_screen_selected(e):
