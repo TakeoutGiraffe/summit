@@ -18,36 +18,42 @@ def main(page: ft.page):
     tasks=Tasks()
     settings=Settings()
     dashboards=Dashboards()
-    selectedControl=welcome
 
     def newScreenSelected(e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
-                selectedControl = apiendpoints
-                update()
+                page.remove(2)
+                page.add(apiendpoints)
+                page.update()
             elif e.control.selected_index == 1:
                 print ("Scripts")
-                selectedControl = scripts
+                page.remove(2)
+                page.add(scripts)
                 page.update()
             elif e.control.selected_index == 2:
                 print ("Tasks")
-                selectedControl = tasks
+                page.remove(2)
+                page.add(tasks)
                 page.update()
             elif e.control.selected_index == 3:
                 print ("Schedules")
-                selectedControl = schedules
+                page.remove(2)
+                page.add(schedules)
                 page.update()
             elif e.control.selected_index == 4:
                 print ("Dashboards")
-                selectedControl = dashboards
+                page.remove(2)
+                page.add(dashboards)
                 page.update()
             elif e.control.selected_index == 5:
                 print ("Security")
-                selectedControl = security
+                page.remove(2)
+                page.add(security)
                 page.update()
             elif e.control.selected_index == 6:
                 print ("Settings")
-                selectedControl = settings
+                page.remove(2)
+                page.add(settings)
                 page.update()
 
     rail = ft.NavigationRail(
@@ -105,7 +111,7 @@ def main(page: ft.page):
     page.add(ft.Row([
         rail,
         ft.VerticalDivider(),
-        selectedControl,
+        welcome,
         ],expand=True))
     page.update()
  
