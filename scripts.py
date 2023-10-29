@@ -9,6 +9,7 @@ class ScriptsView(ft.Column):
     #    parent.switch_view(sev)
 
     def __init__(self):
+        super().__init__()
         #self.parent = parent
         header = ft.Text("Scripts",size=36)
         #scripts = db.get_scripts()
