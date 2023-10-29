@@ -31,7 +31,7 @@ def connect():
     print('Connecting to the PostgreSQL database...') 
     conn = psycopg2.connect(**params) 
           
-    return conn()
+    return conn
        
   
 def get_query(query):
