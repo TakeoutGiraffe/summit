@@ -5,7 +5,7 @@ def get_scripts_view():
     header = ft.Container(ft.Text("Scripts",size=36))
     scripts = db.get_scripts()
     table = ft.DataTable()
-    tools = ft.Row([
+    footer = ft.Row([
         ft.ElevatedButton("New Script")   
     ])
     tools = ft.Row([
