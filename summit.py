@@ -8,20 +8,18 @@ from tasks import Tasks
 from settings import Settings 
 from dashboards import Dashboards
  
-class Workspace(ft.UserControl):
+def main(page: ft.page):
 
-    def __init__(self):
-        super().__init__()
-        self.welcome=Welcome()
-        self.apiendpoints=APIEndpoints()
-        self.schedules=Schedules()
-        self.scripts=Scripts()
-        self.security=Security()
-        self.tasks=Tasks()
-        self.settings=Settings()
-        self.dashboards=Dashboards()
-        self.selectedControl=self.welcome
-    
+    welcome=Welcome()
+    apiendpoints=APIEndpoints()
+    schedules=Schedules()
+    scripts=Scripts()
+    security=Security()
+    tasks=Tasks()
+    settings=Settings()
+    dashboards=Dashboards()
+    selectedControl=self.welcome
+
     def newScreenSelected(self,e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
@@ -52,9 +50,7 @@ class Workspace(ft.UserControl):
                 self.selectedControl = self.settings
                 self.update()
 
-    def build(self):
-        print("Updating")
-        rail = ft.NavigationRail(
+    rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
             min_width=100,
@@ -86,14 +82,7 @@ class Workspace(ft.UserControl):
             ],
             on_change=self.newScreenSelected,
             )
-        return ft.Row([
-            rail,
-            ft.VerticalDivider(),
-            self.selectedControl
-            ],expand=True)
 
-
-def main(page: ft.page):
     page.appbar = ft.AppBar(
         leading=ft.Icon(ft.icons.PALETTE),
         leading_width=40,
@@ -113,8 +102,11 @@ def main(page: ft.page):
     )
     page.title = "Summit"
     page.padding = 0
-    workspace = ft.Container(Workspace(),height=1300)
-    page.add(workspace)
+    page.add(ft.Row([
+            rail,
+            ft.VerticalDivider(),
+            self.selectedControl
+            ],expand=True))
     page.update()
  
 ft.app(target=main)
