@@ -5,7 +5,7 @@ class Scripts(ft.UserControl):
 
     def __init__(self):
         super().__init__(self)
-        #self.scripts = db.get_scripts()
+        self.scripts = db.get_scripts()
         #self.height=height
 
     def build(self):
