@@ -8,7 +8,7 @@ class Scripts(ft.UserControl):
         self.scripts = db.get_scripts()
 
     def build(self):
-        lv = ft.ListView()
+        lv = ft.ListView(expand=true)
         for script in self.scripts:
             lv.controls.append(ft.Text(script[1]))
         return lv
