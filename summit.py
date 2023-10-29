@@ -96,6 +96,6 @@ class Application:
     self.page.update()
  
 def main(page: ft.page):
-    return Applcation()
+    return Applcation(page)
 
 ft.app(target=main)
