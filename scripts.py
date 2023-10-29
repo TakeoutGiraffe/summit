@@ -4,7 +4,7 @@ from scripteditor import ScriptEditorView
 
 class ScriptsView(ft.Column):
 
-    def new_script_clicked():
+    def new_script_clicked(self,e):
         sev=ScriptEditorView()
         parent.switch_view(sev)
 
