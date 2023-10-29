@@ -5,6 +5,7 @@ from scripteditor import ScriptEditorView
 class ScriptsView(ft.Column):
 
     def new_script_clicked(self,e):
+        print("New Script")
         
 
     def edit_script_clicked(self,e):
