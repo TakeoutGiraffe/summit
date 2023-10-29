@@ -37,7 +37,6 @@ class Application(ft.Row):
     def __init__(self,page:ft.page):
         super().__init__(self)
         self.page=page
-        self.selectedView=WelcomeView()
         rail = ft.NavigationRail(
                 selected_index=0,
                 label_type=ft.NavigationRailLabelType.ALL,
@@ -93,7 +92,7 @@ class Application(ft.Row):
         self.controls=[
             rail,
             ft.VerticalDivider(),
-            WelcomeView,
+            WelcomeView(),
             ]
 
     
