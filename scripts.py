@@ -56,4 +56,4 @@ class ScriptsView(ft.Column):
                     ft.DataCell(tools)
                 ]
             ))
-        self.controls=[header]
+        self.controls=[header,Divider(),table,footer]
