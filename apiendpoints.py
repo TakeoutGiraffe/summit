@@ -4,4 +4,4 @@ class APIEndpointsView(ft.Container):
 
     def __init__(self):
         super().__init__()
-        controls= ft.Text("APIEndpoints")
+        self.controls= ft.Text("APIEndpoints")
