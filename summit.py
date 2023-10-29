@@ -89,7 +89,7 @@ def main(page: ft.page):
     page.add(ft.Row([
         rail,
         ft.VerticalDivider(),
-        wv.get_welcome_view(),
+        WelcomeView(),
         ],expand=True))
     page.update()
  
