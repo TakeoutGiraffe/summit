@@ -4,7 +4,7 @@ import dbconnect as db
 def get_scripts_view():
     header = ft.Container(ft.Text("Scripts",size=36))
     scripts = db.get_scripts()
-    table = ft.DataTable()
+    table = ft.DataTable(expand=True)
     footer = ft.Row([
         ft.ElevatedButton("New Script")   
     ])
