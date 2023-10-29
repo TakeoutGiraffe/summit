@@ -1,5 +1,6 @@
 #!/usr/bin/python 
 from configparser import ConfigParser 
+import psycopg2 
   
   
 def config(filename='database.ini', section='postgresql'): 
@@ -18,10 +19,6 @@ def config(filename='database.ini', section='postgresql'):
         raise Exception('Section {0} not found in the {1} file'.format(section, filename)) 
   
     return db
-
-#!/usr/bin/python 
-import psycopg2 
-from config import config 
   
 def connect(): 
     """ Connect to the PostgreSQL database server """
