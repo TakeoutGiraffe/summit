@@ -23,19 +23,19 @@ class Application(ft.UserControl):
 
     def new_screen_selected(self,e):
             if e.control.selected_index == 0:
-                switch_view(APIEndpointsView())
+                self.switch_view(APIEndpointsView())
             elif e.control.selected_index == 1:
-                switch_view(ScriptsView(self))
+                self.switch_view(ScriptsView(self))
             elif e.control.selected_index == 2:
-                switch_view(TasksView())
+                self.switch_view(TasksView())
             elif e.control.selected_index == 3:
-                switch_view(SchedulesView())
+                self.switch_view(SchedulesView())
             elif e.control.selected_index == 4:
-                switch_view(DashboardView())
+                self.switch_view(DashboardView())
             elif e.control.selected_index == 5:
-                switch_view(SecuityView())
+                self.switch_view(SecuityView())
             elif e.control.selected_index == 6:
-                switch_view(SettingsView())
+                self.switch_view(SettingsView())
 
     def build(self):
         rail = ft.NavigationRail(
