@@ -42,8 +42,11 @@ def get_query(query):
     conn.close()
     return ds
 
+def get_script_with_id(id):
+    return get_query(f"SELECT * FROM Scripts WHERE id = {id}")
+
 def get_scripts():
-    return get_query("SELECT * FROM Scripts")
+    return get_query("SELECT id,name FROM Scripts")
   
 if __name__ == '__main__': 
     k = get_scripts();
