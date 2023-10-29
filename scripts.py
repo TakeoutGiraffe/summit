@@ -11,12 +11,11 @@ def get_scripts_view():
         ft.DataColumn(ft.Text('Tools'))
     ]
     for script in scripts:
-        table.rows.add(ft.DataRow(
+        table.rows.append(ft.DataRow(
             cells=[
                 ft.DataCell(ft.Text(script[0])),
                 ft.DataCell(ft.Text(script[0])),
                 ft.DataCell(ft.Text(""))
-
             ]
         ))
     return ft.Column([header,table],expand=True)
