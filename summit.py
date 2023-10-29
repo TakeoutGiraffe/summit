@@ -38,7 +38,7 @@ class Application(ft.UserControl):
                 self.switch_view(SettingsView())
 
     def build(self):
-        print "build"
+        print ("build")
         rail = ft.NavigationRail(
                 selected_index=0,
                 label_type=ft.NavigationRailLabelType.ALL,
