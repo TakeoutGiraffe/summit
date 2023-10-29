@@ -8,8 +8,8 @@ class ScriptsView(ft.Column):
     #    sev=ScriptEditorView()
     #    parent.switch_view(sev)
 
-    def __init__(self, parent):
-        self.parent = parent
+    def __init__(self):
+        #self.parent = parent
         header = ft.Text("Scripts",size=36)
         #scripts = db.get_scripts()
         #table = ft.DataTable(
