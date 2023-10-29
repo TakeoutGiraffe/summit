@@ -12,4 +12,4 @@ class Scripts(ft.UserControl):
         lv = ft.Text("Hello")
         #for script in self.scripts:
         #    lv.controls.append(ft.Text(script[1]))
-        return ft.Column(lv,expand=True)
+        return ft.Column([lv],expand=True)
