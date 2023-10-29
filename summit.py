@@ -35,7 +35,7 @@ class Application(ft.Row):
                 self.switch_view(SettingsView())
 
     def __init__(self,page:ft.page):
-        super().__init__(self)
+        super().__init__()
         self.page=page
         rail = ft.NavigationRail(
                 selected_index=0,
