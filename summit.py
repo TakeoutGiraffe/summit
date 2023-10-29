@@ -15,7 +15,7 @@ class Application(ft.UserControl):
 
     def switch_view(self,view):
         self.page.remove_at(0)
-        self.page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
+        #self.page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
         self.page.update()
 
     def open_editor(e):
