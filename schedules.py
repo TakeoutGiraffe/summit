@@ -1,4 +1,5 @@
 import flet as ft
 
-def get_schedules_view():
+class SchedulesView(ft.UserControl):
+def build(self):
     return ft.Text("Schedules")

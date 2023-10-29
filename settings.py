@@ -1,4 +1,5 @@
 import flet as ft
 
-def get_settings_view():
-    return ft.Text("Settings")
+class SettingsView(ft.UserControl):
+    def build(self):
+        return ft.Text("Settings")

@@ -1,4 +1,5 @@
 import flet as ft
 
-def get_tasks_view():
-    return ft.Text("Tasks")
+class TasksView(ft.UserControl):
+    def build(self):
+        return ft.Text("Tasks")

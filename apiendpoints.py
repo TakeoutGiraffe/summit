@@ -1,4 +1,6 @@
 import flet as ft
 
-def get_api_endpoints_view():
-    return ft.Text("APIEndpoints")
+class APIEndpointsView(ft.UserControl):
+
+    def build(self):
+        return ft.Text("APIEndpoints")

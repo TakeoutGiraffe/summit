@@ -1,5 +1,6 @@
 import flet as ft
 import dbconnect as db
 
-def get_script_editor(script_id):
-    return ft.Text()
+def ScriptEditorView(ft.UserControl):
+    def build(self):
+        return ft.Text("XX")

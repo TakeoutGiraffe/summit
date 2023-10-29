@@ -1,12 +1,11 @@
-import flet as ft
-import welcome as wv
-import apiendpoints as av
-import schedules as sv
-import scripts as scv
-import security as secv
-import tasks as tv
-import settings as xv
-import dashboards as dv
+from apiendpoints import APIEndpointsView
+from dashboards import DashboardView
+from schedules import SchedulesView
+from scripts import ScriptsView
+from security import SecurityView
+from settings import SettingsView
+from tasks import TasksView
+from welcome import WelcomeView
  
 def main(page: ft.page):
 
@@ -20,19 +19,19 @@ def main(page: ft.page):
 
     def new_screen_selected(e):
             if e.control.selected_index == 0:
-                switch_view(av.get_api_endpoints_view())
+                switch_view(APIEndpointsView())
             elif e.control.selected_index == 1:
-                switch_view(scv.get_scripts_view())
+                switch_view(ScriptsView())
             elif e.control.selected_index == 2:
-                switch_view(tv.get_tasks_view())
+                switch_view(TasksView())
             elif e.control.selected_index == 3:
-                switch_view(sv.get_schedules_view())
+                switch_view(SchedulesView())
             elif e.control.selected_index == 4:
-                switch_view(dv.get_dashboards_view())
+                switch_view(DashboardView())
             elif e.control.selected_index == 5:
-                switch_view(secv.get_security_view())
+                switch_view(SecuityView())
             elif e.control.selected_index == 6:
-                switch_view(xv.get_settings_view())
+                switch_view(SettingsView())
 
     rail = ft.NavigationRail(
             selected_index=0,

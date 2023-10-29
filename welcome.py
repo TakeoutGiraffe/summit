@@ -1,4 +1,5 @@
 import flet as ft
 
-def get_welcome_view():
-    return ft.Text("Welcome")
+class WelcomeView(ft.UserControl):
+    def build(self):
+        return ft.Text("Welcome")
