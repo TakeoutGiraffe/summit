@@ -43,7 +43,7 @@ def get_query(query):
     return ds
 
 def get_script_with_id(id):
-    return get_query(f"SELECT * FROM Scripts WHERE id = {id}")
+    return get_query(f"SELECT * FROM Scripts WHERE scriptid = {id}")
 
 def get_scripts():
     return get_query("SELECT scriptid,name FROM Scripts")
