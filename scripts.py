@@ -9,7 +9,7 @@ class Scripts(ft.UserControl):
         #self.height=height
 
     def build(self):
-        lv = ft.ListView(height=700)
+        lv = ft.ListView()
         for script in self.scripts:
             lv.controls.append(ft.Text(script[1]))
         return ft.Container(lv,bgcolor=ft.colors.red)
