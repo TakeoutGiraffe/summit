@@ -22,7 +22,7 @@ def main(page: ft.page):
             if e.control.selected_index == 0:
                 switch_view(av.get_api_endpoints_view())
             elif e.control.selected_index == 1:
-                switch_view(scv.get_scripts_view(self))
+                switch_view(scv.get_scripts_view())
             elif e.control.selected_index == 2:
                 switch_view(tv.get_tasks_view())
             elif e.control.selected_index == 3:

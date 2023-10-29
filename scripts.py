@@ -12,7 +12,7 @@ def get_scripts_view(parent):
         horizontal_lines=ft.border.BorderSide(1, "black"),
     )
     footer = ft.Row([
-        ft.ElevatedButton("New Script",on_click=parent.open_editor)   
+        ft.ElevatedButton("New Script",on_click=open_editor)   
     ])
     tools = ft.Row([
         ft.IconButton(
