@@ -22,7 +22,7 @@ class Application(ft.Row):
             if e.control.selected_index == 0:
                 self.switch_view(APIEndpointsView())
             elif e.control.selected_index == 1:
-                self.switch_view(ScriptsView(self))
+                self.switch_view(ScriptsView())
             elif e.control.selected_index == 2:
                 self.switch_view(TasksView())
             elif e.control.selected_index == 3:
