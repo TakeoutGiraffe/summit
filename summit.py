@@ -47,7 +47,7 @@ class Workspace(ft.UserControl):
                 self.update()
 
     def build(self):
-
+        print("Updating")
         rail = ft.NavigationRail(
             selected_index=0,
             label_type=ft.NavigationRailLabelType.ALL,
