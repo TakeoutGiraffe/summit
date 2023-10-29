@@ -7,6 +7,7 @@ class ScriptEditorView(ft.Column):
         super().__init__()
 
         script=db.get_script_with_id(script_id)
+        print(script)
         header = ft.Text(script[1], size=36)
 
         script_text = ft.TextField(
