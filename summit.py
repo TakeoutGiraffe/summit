@@ -26,7 +26,7 @@ class Workspace(ft.UserControl):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = self.apiendpoints
-                vc.update()
+                self.update()
             elif e.control.selected_index == 1:
                 self.selectedControl = self.scripts
                 self.update()
