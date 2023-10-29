@@ -10,6 +10,7 @@ import flet as ft
  
 class Application:
     def __init__(self,page):
+        super().__init__(self)
         self.page=page
 
     def switch_view(view):
