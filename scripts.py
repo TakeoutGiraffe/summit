@@ -34,6 +34,7 @@ class ScriptsView(ft.Column):
             ft.DataColumn(ft.Text("Tools"))
         ]
         for script in scripts:
+            print(script[0])
             tools = ft.Row([
             ft.IconButton(
                         icon=ft.icons.PLAY_ARROW,
