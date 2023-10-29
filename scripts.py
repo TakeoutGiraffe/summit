@@ -1,5 +1,5 @@
 import flet as ft
-import dbconnect as db
+#import dbconnect as db
 #from scripteditor import ScriptEditorView
 
 class ScriptsView(ft.Column):
