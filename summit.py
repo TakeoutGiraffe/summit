@@ -93,7 +93,7 @@ class Application(ft.Row):
         self.controls=[
             rail,
             ft.VerticalDivider(),
-            self.WelcomeView,
+            WelcomeView,
             ]
 
     
