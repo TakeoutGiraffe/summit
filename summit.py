@@ -69,7 +69,7 @@ class Application:
             on_change=new_screen_selected,
             )
 
-    pself.page.appbar = ft.AppBar(
+    self.page.appbar = ft.AppBar(
         leading=ft.Icon(ft.icons.PALETTE),
         leading_width=40,
         title=ft.Text("AppBar Example"),
