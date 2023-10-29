@@ -23,26 +23,32 @@ class Workspace(ft.UserControl):
         self.selectedControl=self.welcome
     
     def newScreenSelected(self,e):
-            print (e.control.selected_index)
             if e.control.selected_index == 0:
+                print ("API Endpoints")
                 self.selectedControl = self.apiendpoints
                 self.update()
             elif e.control.selected_index == 1:
+                print ("Scripts")
                 self.selectedControl = self.scripts
                 self.update()
             elif e.control.selected_index == 2:
-                self.selectedControl = self.security
+                print ("Tasks")
+                self.selectedControl = self.tasks
                 self.update()
             elif e.control.selected_index == 3:
+                print ("Schedules")
                 self.selectedControl = self.schedules
                 self.update()
             elif e.control.selected_index == 4:
+                print ("Dashboards")
                 self.selectedControl = self.dashboards
                 self.update()
             elif e.control.selected_index == 5:
+                print ("Security")
                 self.selectedControl = self.security
                 self.update()
             elif e.control.selected_index == 6:
+                print ("Settings")
                 self.selectedControl = self.settings
                 self.update()
 
