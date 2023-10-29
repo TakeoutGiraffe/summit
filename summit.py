@@ -22,7 +22,7 @@ class Workspace(ft.UserControl):
         self.dashboards=Dashboards()
         self.selectedControl=self.welcome
     
-    def newScreenSelected(e):
+    def newScreenSelected(d,e):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
                 self.selectedControl = self.apiendpoints
