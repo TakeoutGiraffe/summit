@@ -11,7 +11,7 @@ class ScriptsView(ft.Column):
     def __init__(self, parent):
         self.parent = parent
         header = ft.Container(ft.Text("Scripts",size=36))
-        scripts = db.get_scripts()
+        #scripts = db.get_scripts()
         table = ft.DataTable(
             bgcolor="white",
             border=ft.border.all(2, "black"),
