@@ -1,6 +1,6 @@
 import flet as ft
 
-class DashboardView():
+class DashboardView(ft.Container):
     def __init__(self):
             super().__init__()
-            return ft.Text("Dashboards")
+            controls= ft.Text("Dashboards")

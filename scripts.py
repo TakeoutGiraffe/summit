@@ -2,7 +2,7 @@ import flet as ft
 import dbconnect as db
 from scripteditor import ScriptEditorView
 
-class ScriptsView():
+class ScriptsView(ft.Container):
 
     def new_script_clicked():
         sev=ScriptEditorView()
@@ -56,4 +56,4 @@ class ScriptsView():
                     ft.DataCell(tools)
                 ]
             ))
-        return ft.Column([header,ft.Divider(),table,footer],expand=True)
+        controls= ft.Column([header,ft.Divider(),table,footer],expand=True)

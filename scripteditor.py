@@ -1,8 +1,8 @@
 import flet as ft
 import dbconnect as db
 
-class ScriptEditorView():
+class ScriptEditorView(ft.container):
 
     def __init__(self):
         super().__init__()
-        return ft.Text("XX")
+        controls= ft.Text("XX")

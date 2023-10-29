@@ -1,7 +1,7 @@
 import flet as ft
 
-class APIEndpointsView():
+class APIEndpointsView(ft.Container):
 
     def __init__(self):
         super().__init__()
-        return ft.Text("APIEndpoints")
+        controls= ft.Text("APIEndpoints")

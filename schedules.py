@@ -1,6 +1,6 @@
 import flet as ft
 
-class SchedulesView():
+class SchedulesView(ft.Container):
     def __init__(self):
         super().__init__()
-        return ft.Text("Schedules")
+        controls= ft.Text("Schedules")

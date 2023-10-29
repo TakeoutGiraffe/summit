@@ -1,6 +1,6 @@
 import flet as ft
 
-class TasksView(ft.UserControl):
+class TasksView(ft.Container):
     def __init__(self):
         super().__init__()
-        return ft.Text("Tasks")
+        controls= ft.Text("Tasks")
