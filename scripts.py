@@ -9,5 +9,5 @@ class Scripts(ft.UserControl):
     def build(self):
         rv = ft.Column()
         for x in self.scripts:
-            rv.add(ft.Text((script[0]))
+            rv.add(ft.Text(script[0]))
         return rv
