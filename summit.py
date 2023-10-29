@@ -9,7 +9,7 @@ from welcome import WelcomeView
 import flet as ft
  
 class Application:
-    def __init__(page):
+    def __init__(self,page):
         self.page=page
 
     def switch_view(view):
