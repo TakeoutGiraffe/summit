@@ -1,5 +1,4 @@
 import flet as ft
 
-class Dashboards(ft.UserControl):
-    def build(self):
+def get_dashboards_view(self):
         return ft.Text("Dashboards")

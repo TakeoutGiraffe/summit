@@ -1,59 +1,50 @@
 import flet as ft
-from welcome import Welcome
-from apiendpoints import APIEndpoints
-from schedules import Schedules
-from scripts import Scripts
-from security import Security
-from tasks import Tasks
-from settings import Settings 
-from dashboards import Dashboards
+import welcome
+import apiendpoints
+import schedules
+import scripts
+import security
+import tasks
+import settings 
+import dashboards
  
 def main(page: ft.page):
-
-    welcome=Welcome()
-    apiendpoints=APIEndpoints()
-    schedules=Schedules()
-    scripts=Scripts()
-    security=Security()
-    tasks=Tasks()
-    settings=Settings()
-    dashboards=Dashboards()
 
     def newScreenSelected(e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),apiendpoints,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_api_endpoints_view(),],expand=True)))
                 page.update()
             elif e.control.selected_index == 1:
                 print ("Scripts")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),scripts,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_scripts_view(),],expand=True)))
                 page.update()
             elif e.control.selected_index == 2:
                 print ("Tasks")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),tasks,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_tasks_view(),],expand=True)))
                 page.update()
             elif e.control.selected_index == 3:
                 print ("Schedules")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),schedules,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_schedules_view(),],expand=True)))
                 page.update()
             elif e.control.selected_index == 4:
                 print ("Dashboards")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),dashboards,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_dashboards_view(),],expand=True)))
                 page.update()
             elif e.control.selected_index == 5:
                 print ("Security")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),security,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_security_view(),],expand=True)))
                 page.update()
             elif e.control.selected_index == 6:
                 print ("Settings")
                 page.remove_at(0)
-                page.add((ft.Row([rail,ft.VerticalDivider(),settings,],expand=True)))
+                page.add((ft.Row([rail,ft.VerticalDivider(),get_settings_view,],expand=True)))
                 page.update()
 
     rail = ft.NavigationRail(
@@ -111,7 +102,7 @@ def main(page: ft.page):
     page.add(ft.Row([
         rail,
         ft.VerticalDivider(),
-        welcome,
+        get_welcome_view(),
         ],expand=True))
     page.update()
  

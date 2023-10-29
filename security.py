@@ -1,5 +1,4 @@
 import flet as ft
 
-class Security(ft.UserControl):
-    def build(self):
-        return ft.Text("Security")
+def get_security_view(self):
+    return ft.Text("Security")
