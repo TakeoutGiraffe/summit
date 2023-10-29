@@ -31,26 +31,19 @@ def connect():
         print('Connecting to the PostgreSQL database...') 
         conn = psycopg2.connect(**params) 
           
-        # create a cursor 
-        cur = conn.cursor() 
-          
-    # execute a statement 
-        print('PostgreSQL database version:') 
-        cur.execute('SELECT version()') 
+        return conn()
+       
   
-        # display the PostgreSQL database server version 
-        db_version = cur.fetchone() 
-        print(db_version) 
-         
-    # close the communication with the PostgreSQL 
-        cur.close() 
-    except (Exception, psycopg2.DatabaseError) as error: 
-        print(error) 
-    finally: 
-        if conn is not None: 
-            conn.close() 
-            print('Database connection closed.') 
-  
+def get_query(query):
+    conn=connect()
+    cur=conn.cursor()
+    cur.execute(query)
+    ds=cur.fetchall()
+    conn.close()
+    return ds
+
+def get_scripts():
+    return get_query("SELECT * FROM Scripts")
   
 if __name__ == '__main__': 
     connect()
