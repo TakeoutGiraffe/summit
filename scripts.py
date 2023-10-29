@@ -25,7 +25,7 @@ def get_scripts_view():
     table.columns = [
         ft.DataColumn(ft.Text('ID')),
         ft.DataColumn(ft.Text('Script Name')),
-        ft.DataColumn(ft.Text('Tools'))
+        ft.DataColumn(tools)
     ]
     for script in scripts:
         table.rows.append(ft.DataRow(
