@@ -43,7 +43,7 @@ class ScriptsView(ft.Column):
                         icon_color="blue400",
                         icon_size=40,
                         tooltip="Edit Script",
-                        data=script[0]
+                        data=script[0],
                         on_click=self.edit_script_clicked
                     ),
             ft.IconButton(
