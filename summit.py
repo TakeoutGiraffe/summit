@@ -5,13 +5,12 @@ from schedules import Schedules
 from scripts import Scripts
 from security import Security
 from tasks import Tasks
-from settings import Settings
+from settings import Settings 
 from dashboards import Dashboards
  
 class Workspace(ft.UserControl):
 
-    def __init__(self):
-        super().__init__()
+    def initialize(self):
         self.welcome=Welcome()
         self.apiendpoints=APIEndpoints()
         self.schedules=Schedules()
@@ -21,7 +20,7 @@ class Workspace(ft.UserControl):
         self.settings=Settings()
         self.dashboards=Dashboards()
         self.selectedControl=self.welcome
-    
+
     def newScreenSelected(e):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
