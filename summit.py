@@ -23,32 +23,32 @@ def main(page: ft.page):
     def newScreenSelected(self,e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
-                self.selectedControl = self.apiendpoints
-                self.update()
+                selectedControl = apiendpoints
+                update()
             elif e.control.selected_index == 1:
                 print ("Scripts")
-                self.selectedControl = self.scripts
-                self.update()
+                selectedControl = scripts
+                page.update()
             elif e.control.selected_index == 2:
                 print ("Tasks")
-                self.selectedControl = self.tasks
-                self.update()
+                selectedControl = tasks
+                page.update()
             elif e.control.selected_index == 3:
                 print ("Schedules")
-                self.selectedControl = self.schedules
-                self.update()
+                selectedControl = schedules
+                page.update()
             elif e.control.selected_index == 4:
                 print ("Dashboards")
-                self.selectedControl = self.dashboards
-                self.update()
+                selectedControl = dashboards
+                page.update()
             elif e.control.selected_index == 5:
                 print ("Security")
-                self.selectedControl = self.security
-                self.update()
+                selectedControl = security
+                page.update()
             elif e.control.selected_index == 6:
                 print ("Settings")
-                self.selectedControl = self.settings
-                self.update()
+                selectedControl = settings
+                page.update()
 
     rail = ft.NavigationRail(
             selected_index=0,
@@ -103,10 +103,10 @@ def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
     page.add(ft.Row([
-            rail,
-            ft.VerticalDivider(),
-            self.selectedControl
-            ],expand=True))
+        rail,
+        ft.VerticalDivider(),
+        selectedControl,
+        ],expand=True))
     page.update()
  
 ft.app(target=main)
