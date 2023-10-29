@@ -5,6 +5,7 @@ from scripteditor import ScriptEditorView
 class ScriptItem(ft.Row):
 
     def __init__(self,parent,id,name):
+        super().__init__()
     
         def edit_script_clicked(e):
             print (f"data: {e.data}")
@@ -55,4 +56,5 @@ class ScriptsView(ft.Column):
 
         for script in scripts:
             table.controls.append(ScriptItem(self.parent, script[0], script[1]))
+
         self.controls=[header,ft.Divider(),table,footer]
