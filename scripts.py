@@ -9,7 +9,7 @@ class ScriptsView(ft.Column):
         
 
     def edit_script_clicked(self,e):
-        print(e)
+        print(f"data: {e.data}")
         sev=ScriptEditorView(e.data)
         parent.switch_view(sev)
 
@@ -46,8 +46,8 @@ class ScriptsView(ft.Column):
                         icon_color="blue400",
                         icon_size=40,
                         tooltip="Edit Script",
-                        data=script[0],
-                        on_click=self.edit_script_clicked
+                        data=script[1],
+                        on_click=edit_script_clicked
                     ),
             ft.IconButton(
                         icon=ft.icons.DELETE,
