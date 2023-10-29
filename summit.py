@@ -21,7 +21,7 @@ class Application(ft.UserControl):
     def open_editor(e):
         print("clicky click")
 
-    def new_screen_selectedd(d,e):
+    def new_screen_selected(self,e):
             if e.control.selected_index == 0:
                 switch_view(APIEndpointsView())
             elif e.control.selected_index == 1:
