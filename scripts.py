@@ -10,7 +10,7 @@ class ScriptsView(ft.Column):
     def __init__(self,parent):
 
         def edit_script_clicked(e):
-            print(f"data: {e.data}")
+            print(f"data: {e.tooltip}")
             sev=ScriptEditorView(e.data)
             parent.switch_view(sev)
 
@@ -34,7 +34,6 @@ class ScriptsView(ft.Column):
             ft.DataColumn(ft.Text("Tools"))
         ]
         for script in scripts:
-            print(script[0])
             tools = ft.Row([
             ft.IconButton(
                         icon=ft.icons.PLAY_ARROW,
@@ -47,7 +46,7 @@ class ScriptsView(ft.Column):
                         icon_color="blue400",
                         icon_size=40,
                         tooltip="Edit Script",
-                        data=script[1],
+                        data=script[0],
                         on_click=edit_script_clicked
                     ),
             ft.IconButton(
