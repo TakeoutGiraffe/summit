@@ -12,4 +12,4 @@ class Scripts(ft.UserControl):
         lv = ft.Text("Hello")
         #for script in self.scripts:
         #    lv.controls.append(ft.Text(script[1]))
-        return lv#ft.Container(lv,bgcolor=ft.colors.red)
+        return ft.Container(lv,bgcolor=ft.colors.red,height=700)
