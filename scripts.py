@@ -10,7 +10,7 @@ def get_scripts_view():
     ])
     tools = ft.Row([
         ft.IconButton(
-                    icon=ft.icons.PLAY_ARROR,
+                    icon=ft.icons.PLAY_ARROW,
                     icon_color="green",
                     icon_size=40,
                     tooltip="Run Script",
