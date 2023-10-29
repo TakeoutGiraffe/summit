@@ -18,4 +18,4 @@ def get_scripts_view():
                 ft.DataCell(ft.Text(""))
             ]
         ))
-    return ft.Column([header,ft.HorizontalLine(),table],expand=True)
+    return ft.Column([header,ft.Divider(),table],expand=True)
