@@ -37,58 +37,59 @@ class Application(ft.UserControl):
             elif e.control.selected_index == 6:
                 switch_view(SettingsView())
 
-    rail = ft.NavigationRail(
-            selected_index=0,
-            label_type=ft.NavigationRailLabelType.ALL,
-            min_width=100,
-            min_extended_width=300,
-            extended=True,
-            group_alignment=-0.9,
-            destinations=[
-                ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="API Endpoints"
-                ),
-                ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Scripts"
-                ),
-                ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Running Tasks"
-                ),
-                ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Schedules"
-                ),
-                ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Dashboards"
-                ),
-                ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Security"
-                ),
-                ft.NavigationRailDestination(
-                    icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
+    def build(Self):
+        rail = ft.NavigationRail(
+                selected_index=0,
+                label_type=ft.NavigationRailLabelType.ALL,
+                min_width=100,
+                min_extended_width=300,
+                extended=True,
+                group_alignment=-0.9,
+                destinations=[
+                    ft.NavigationRailDestination(
+                        icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="API Endpoints"
+                    ),
+                    ft.NavigationRailDestination(
+                        icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Scripts"
+                    ),
+                    ft.NavigationRailDestination(
+                        icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Running Tasks"
+                    ),
+                    ft.NavigationRailDestination(
+                        icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Schedules"
+                    ),
+                    ft.NavigationRailDestination(
+                        icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Dashboards"
+                    ),
+                    ft.NavigationRailDestination(
+                        icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Security"
+                    ),
+                    ft.NavigationRailDestination(
+                        icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
+                    ),
+                ],
+                on_change=new_screen_selected,
+                )
+
+        self.page.appbar = ft.AppBar(
+            leading=ft.Icon(ft.icons.PALETTE),
+            leading_width=40,
+            title=ft.Text("AppBar Example"),
+            center_title=False,
+            bgcolor=ft.colors.SURFACE_VARIANT,
+            actions=[
+                ft.IconButton(ft.icons.WB_SUNNY_OUTLINED),
+                ft.IconButton(ft.icons.FILTER_3),
+                ft.PopupMenuButton(
+                    items=[
+                        ft.PopupMenuItem(text="Item 1"),
+                        ft.PopupMenuItem(),  # divider
+                    ]
                 ),
             ],
-            on_change=new_screen_selected,
-            )
+        )
 
-    self.page.appbar = ft.AppBar(
-        leading=ft.Icon(ft.icons.PALETTE),
-        leading_width=40,
-        title=ft.Text("AppBar Example"),
-        center_title=False,
-        bgcolor=ft.colors.SURFACE_VARIANT,
-        actions=[
-            ft.IconButton(ft.icons.WB_SUNNY_OUTLINED),
-            ft.IconButton(ft.icons.FILTER_3),
-            ft.PopupMenuButton(
-                items=[
-                    ft.PopupMenuItem(text="Item 1"),
-                    ft.PopupMenuItem(),  # divider
-                ]
-            ),
-        ],
-    )
-
-    def build(Self):
+    
         return ft.Row([
             rail,
             ft.VerticalDivider(),
