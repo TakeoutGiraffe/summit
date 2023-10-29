@@ -9,7 +9,7 @@ from welcome import WelcomeView
 import flet as ft
  
 class Application(ft.UserControl):
-    def __init__(self,page):
+    def __init__(self,page:ft.page):
         super().__init__(self)
         self.page=page
 
