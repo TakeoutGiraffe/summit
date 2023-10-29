@@ -8,7 +8,7 @@ class ScriptItem(ft.Row):
         super().__init__()
     
         def edit_script_clicked(e):
-            parent.switch_view(SciptEditorView(id))
+            parent.switch_view(ScriptEditorView(id))
 
         self.id = id
         self.parent = parent
