@@ -5,4 +5,4 @@ class ScriptEditorView(ft.Column):
 
     def __init__(self):
         super().__init__()
-        self.controls= ft.Text("XX")
+        self.controls=[] ft.Text("XX")]
