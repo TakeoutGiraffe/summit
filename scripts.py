@@ -50,5 +50,5 @@ class ScriptsView(ft.Column):
         table = ft.ListView()
 
         for script in scripts:
-            table.controls.append(ScriptItem(self.parent, scripts[0], scripts[1]))
+            table.controls.append(ScriptItem(self.parent, script[0], script[1]))
         self.controls=[header,ft.Divider(),table,footer]
