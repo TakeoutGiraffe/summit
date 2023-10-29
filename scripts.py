@@ -12,4 +12,4 @@ class Scripts(ft.UserControl):
         #lv = ft.ListView()
        # for script in self.scripts:
         #    lv.controls.append(ft.Text(script[1]))
-        return ft.Column([Text("Scripts"),Text("Hello"),],expand=True)
+        return ft.Column([Text("Scripts"),Text("Hello"),])
