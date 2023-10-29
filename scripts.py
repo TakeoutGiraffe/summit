@@ -2,7 +2,7 @@ import flet as ft
 import dbconnect as db
 from scripteditor import ScriptEditorView
 
-class ScriptsView(ft.Container):
+class ScriptsView(ft.Column):
 
     def new_script_clicked():
         sev=ScriptEditorView()
@@ -10,6 +10,7 @@ class ScriptsView(ft.Container):
 
     def __init__(self, parent):
         self.parent = parent
+        self.expand = True
 
         header = ft.Container(ft.Text("Scripts",size=36))
         scripts = db.get_scripts()
