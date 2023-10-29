@@ -11,7 +11,7 @@ def get_scripts_view():
         ft.DataColumn(ft.Text('Tools'))
     ]
     for script in scripts:
-        ft.rows.add(ft.DataRow(
+        table.rows.add(ft.DataRow(
             cells=[
                 ft.DataCell(ft.Text(script[0])),
                 ft.DataCell(ft.Text(script[0])),
