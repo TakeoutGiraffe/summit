@@ -6,6 +6,7 @@ from security import SecurityView
 from settings import SettingsView
 from tasks import TasksView
 from welcome import WelcomeView
+import flet as ft
  
 def main(page: ft.page):
 
