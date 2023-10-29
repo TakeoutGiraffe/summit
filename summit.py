@@ -37,7 +37,7 @@ class Application(ft.UserControl):
             elif e.control.selected_index == 6:
                 switch_view(SettingsView())
 
-    def build(Self):
+    def build(self):
         rail = ft.NavigationRail(
                 selected_index=0,
                 label_type=ft.NavigationRailLabelType.ALL,
