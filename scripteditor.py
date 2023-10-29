@@ -10,7 +10,7 @@ class ScriptEditorView(ft.Column):
 
         script=db.get_script_with_id(script_id)
         script_text = ft.TextField(
-            value=script[2]
+            value=script[2],
             multiline=True
         )
 
