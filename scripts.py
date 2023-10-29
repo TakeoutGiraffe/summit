@@ -4,10 +4,11 @@ from scripteditor import ScriptEditorView
 
 class ScriptItem(ft.Row):
 
-    def edit_script_clicked(e):
-        print (f"data: {e.data}")
-
     def __init__(self,parent,id,name):
+    
+        def edit_script_clicked(e):
+            print (f"data: {e.data}")
+
         self.id = id
         self.parent = parent
         self.controls=[
