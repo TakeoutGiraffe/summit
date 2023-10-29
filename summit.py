@@ -11,7 +11,8 @@ import flet as ft
 class Application(ft.Row):
 
     def switch_view(self,view):
-       self.selectedView=view
+       self.controls.remove[2]
+       self.controls.append(view) 
        self.page.update()
 
     def open_editor(e):
@@ -92,7 +93,7 @@ class Application(ft.Row):
         self.controls=[
             rail,
             ft.VerticalDivider(),
-            self.selectedView,
+            self.WelcomeView,
             ]
 
     
