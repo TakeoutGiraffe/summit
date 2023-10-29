@@ -9,7 +9,7 @@ class ScriptsView(ft.UserControl):
 
     def new_script_clicked():
         sev=ScriptEditorView()
-        parent.switch_view()
+        parent.switch_view(sev)
 
     def build(self):
         header = ft.Container(ft.Text("Scripts",size=36))
