@@ -12,11 +12,11 @@ class Application(ft.UserControl):
     def __init__(self,page:ft.page):
         super().__init__(self)
         self.page=page
+        self.selectedView=Welcome()
 
     def switch_view(self,view):
-        self.page.remove_at(0)
-        #self.page.add((ft.Row([rail,ft.VerticalDivider(),view,],expand=True)))
-        self.page.update()
+       self.selectedView=view
+       self.page.update()
 
     def open_editor(e):
         print("clicky click")
@@ -93,7 +93,7 @@ class Application(ft.UserControl):
         return ft.Row([
             rail,
             ft.VerticalDivider(),
-            WelcomeView(),
+            self.selectedView,
             ],height=700)
  
 def main(page: ft.page):
