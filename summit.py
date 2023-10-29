@@ -88,12 +88,12 @@ class Application(ft.Row):
             ],
         )
 
-    
-        return ft.Row([
+        self.height=700
+        self.controls=[
             rail,
             ft.VerticalDivider(),
             self.selectedView,
-            ],height=700)
+            ]
 
     
 
