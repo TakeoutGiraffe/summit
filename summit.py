@@ -20,7 +20,7 @@ def main(page: ft.page):
     dashboards=Dashboards()
     selectedControl=welcome
 
-    def newScreenSelected(self,e):
+    def newScreenSelected(e):
             if e.control.selected_index == 0:
                 print ("API Endpoints")
                 selectedControl = apiendpoints
@@ -80,7 +80,7 @@ def main(page: ft.page):
                     icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
                 ),
             ],
-            on_change=self.newScreenSelected,
+            on_change=newScreenSelected,
             )
 
     page.appbar = ft.AppBar(
