@@ -10,7 +10,8 @@ from dashboards import Dashboards
  
 class Workspace(ft.UserControl):
 
-    def initialize(self):
+    def __init__(self,Page:page):
+        super().__init__()
         self.welcome=Welcome()
         self.apiendpoints=APIEndpoints()
         self.schedules=Schedules()
@@ -20,7 +21,7 @@ class Workspace(ft.UserControl):
         self.settings=Settings()
         self.dashboards=Dashboards()
         self.selectedControl=self.welcome
-
+    
     def newScreenSelected(e):
             print (e.control.selected_index)
             if e.control.selected_index == 0:
