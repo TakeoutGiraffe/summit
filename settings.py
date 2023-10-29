@@ -1,6 +1,6 @@
 import flet as ft
 
-class SettingsView():
+class SettingsView(ft.Container):
     def __init__(self):
         super().__init__()
-        return ft.Text("Settings")
+        controls= ft.Text("Settings")
