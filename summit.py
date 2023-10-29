@@ -18,7 +18,7 @@ def main(page: ft.page):
     tasks=Tasks()
     settings=Settings()
     dashboards=Dashboards()
-    selectedControl=self.welcome
+    selectedControl=welcome
 
     def newScreenSelected(self,e):
             if e.control.selected_index == 0:
