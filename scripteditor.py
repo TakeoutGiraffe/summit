@@ -1,7 +1,7 @@
 import flet as ft
 import dbconnect as db
 
-class ScriptEditorView(ft.UserControl):
+class ScriptEditorView():
 
     def __init__(self):
         super().__init__()

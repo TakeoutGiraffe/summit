@@ -1,6 +1,6 @@
 import flet as ft
 
-class SettingsView(ft.UserControl):
+class SettingsView():
     def __init__(self):
         super().__init__()
         return ft.Text("Settings")
