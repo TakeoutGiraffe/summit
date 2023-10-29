@@ -7,13 +7,13 @@ class ScriptsView(ft.Column):
     def new_script_clicked(self,e):
         print("New Script")
         
-
-    def edit_script_clicked(self,e):
-        print(f"data: {e.data}")
-        sev=ScriptEditorView(e.data)
-        parent.switch_view(sev)
-
     def __init__(self,parent):
+
+        def edit_script_clicked(self,e):
+            print(f"data: {e.data}")
+            sev=ScriptEditorView(e.data)
+            parent.switch_view(sev)
+
         super().__init__()
         self.parent = parent
         header = ft.Text("Scripts",size=36)
@@ -47,7 +47,7 @@ class ScriptsView(ft.Column):
                         icon_size=40,
                         tooltip="Edit Script",
                         data=script[1],
-                        on_click=self.edit_script_clicked
+                        on_click=edit_script_clicked
                     ),
             ft.IconButton(
                         icon=ft.icons.DELETE,
