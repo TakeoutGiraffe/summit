@@ -8,34 +8,32 @@ class ScriptItem(ft.Row):
         super().__init__()
     
         def edit_script_clicked(e):
-            print (f"data: {e.data}")
+            print (id)
 
         self.id = id
         self.parent = parent
-        self.controls=[
-            ft.Text(id),
-            ft.Text(name),
-            ft.IconButton(
+        cid = ft.Text(id),
+        cname = ft.Text(name),
+        crun = ft.IconButton(
                         icon=ft.icons.PLAY_ARROW,
                         icon_color="green",
                         icon_size=40,
                         tooltip="Run Script",
                     ),
-            ft.IconButton(
+        cedit = ft.IconButton(
                         icon=ft.icons.EDIT,
                         icon_color="blue400",
                         icon_size=40,
                         tooltip="Edit Script",
-                        data=id,
                         on_click=edit_script_clicked
                     ),
-            ft.IconButton(
+        cdel = ft.IconButton(
                         icon=ft.icons.DELETE,
                         icon_color="red",
                         icon_size=40,
                         tooltip="Delete Script",
                     ),
-        ]
+        self.controls=[cid,cname,crun,cedit,cdel]
 
 class ScriptsView(ft.Column):
 
