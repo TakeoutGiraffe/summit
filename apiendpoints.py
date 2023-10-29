@@ -4,4 +4,4 @@ class APIEndpointsView(ft.Column):
 
     def __init__(self):
         super().__init__()
-        self.controls= ft.Text("APIEndpoints")
+        self.controls=[ft.Text("APIEndpoints")]

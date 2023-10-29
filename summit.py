@@ -15,7 +15,11 @@ class Application(ft.UserControl):
         self.selectedView=WelcomeView()
 
     def switch_view(self,view):
-       self.selectedView=view
+       return ft.Row([
+            rail,
+            ft.VerticalDivider(),
+            view,
+            ],height=700)
        self.page.update()
 
     def open_editor(e):
