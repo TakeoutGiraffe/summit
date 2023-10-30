@@ -102,8 +102,15 @@ class Application(ft.Row):
 def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
-    app=Application(page)
-    page.add(app)
-    page.update()
+    if user:
+        app=Application(page)
+        page.add(app)
+        page.update()
+    else:
+        page.add(ft.Column([
+            ft.TextField("User Name"),
+            ft.TextField("Password")
+        ]))
+        page.update
 
 ft.app(target=main)
