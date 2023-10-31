@@ -33,6 +33,12 @@ class Application(ft.Row):
                 self.switch_view(SecurityView())
             elif e.control.selected_index == 6:
                 self.switch_view(SettingsView())
+    
+    def login_user(self.e):
+        if login.value=="admin" and pwd.value="dydx32&c":
+            self.page.session.set('userlogin','admin')
+        self.page.update()
+
 
     def __init__(self,page:ft.page):
         super().__init__()
@@ -97,10 +103,13 @@ class Application(ft.Row):
                 ]
         else:
             self.height=700
+            self.login = ft.TextField(label="Login"),
+            self.pwd=ft.TextField(label="Password"),
+            self.loginbtn=ft.ElevatedButton("Login",password=True,on_clicked:loginUser)
             self.controls=[
-                ft.TextField(label="Login"),
-                ft.TextField(label="Password"),
-                ft.ElevatedButton("Login")
+                self.login,
+                self.pwd,
+                self.loginbtn
             ]
     
 
