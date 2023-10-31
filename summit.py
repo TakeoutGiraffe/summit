@@ -42,7 +42,7 @@ class Application(ft.Row):
             self.controls=[
                 ft.TextField("Login"),
                 ft.TextField("Password"),
-                ft.Button()"Login")
+                ft.Button("Login")
             ]
         else:
             rail = ft.NavigationRail(
