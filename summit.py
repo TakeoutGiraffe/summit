@@ -37,12 +37,10 @@ class Application(ft.Row):
     def login_user(self,e):
         if self.login.value=="admin" and self.pwd.value=="dydx32&c":
             self.page.session.set('userlogin','admin')
+            self.build(self,self.page)
         self.page.update()
 
-
-    def __init__(self,page:ft.page):
-        super().__init__()
-        self.page=page
+    def build(self,page:ft.page):
         if page.session.contains_key("userlogin"):
             rail = ft.NavigationRail(
                     selected_index=0,
@@ -111,6 +109,11 @@ class Application(ft.Row):
                 self.pwd,
                 self.loginbtn
             ]
+
+    def __init__(self,page:ft.page):
+        super().__init__()
+        self.page=page
+        self.build(self,self.page)
     
 
        
