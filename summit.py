@@ -37,7 +37,7 @@ class Application(ft.Row):
     def __init__(self,page:ft.page):
         super().__init__()
         self.page=page
-        if 'userlogin' in page.session:
+        if page.session.contains_key("userlogin"):
             rail = ft.NavigationRail(
                     selected_index=0,
                     label_type=ft.NavigationRailLabelType.ALL,
