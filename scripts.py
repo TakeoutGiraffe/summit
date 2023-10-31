@@ -34,7 +34,7 @@ class ScriptItem(ft.Container):
                         icon_size=40,
                         tooltip="Delete Script",
                     )
-        self.controls=[ft.Row(expand=true,bgcolor=ft.colors.white,controls=[
+        self.controls=[ft.Row(expand=True,bgcolor=ft.colors.white,controls=[
             cid,
             cname,
             crun,
