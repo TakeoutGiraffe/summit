@@ -2,7 +2,7 @@ import flet as ft
 import dbconnect as db
 from scripteditor import ScriptEditorView
 
-class ScriptItem(ft.Row):
+class ScriptItem(ft.Container):
 
     def __init__(self,parent,id,name):
         super().__init__()
@@ -12,6 +12,7 @@ class ScriptItem(ft.Row):
 
         self.id = id
         self.parent = parent
+        self.expand=True
         cid = ft.Text(id)
         cname = ft.Text(name)
         crun = ft.IconButton(
@@ -33,7 +34,13 @@ class ScriptItem(ft.Row):
                         icon_size=40,
                         tooltip="Delete Script",
                     )
-        self.controls=[cid,cname,crun,cedit,cdel]
+        self.controls=[ft.Row(expand=true,bgcolor=ft.colors.white,controls=[
+            cid,
+            cname,
+            crun,
+            cedit,
+            cdel
+        ])]
 
 class ScriptsView(ft.Column):
 
