@@ -12,7 +12,7 @@ class ScriptItem(ft.Container):
 
         self.id = id
         self.parent = parent
-        self.expand=True
+        self.height=40
         self.bgcolor=ft.colors.WHITE
         cid = ft.Text(id)
         cname = ft.Text(name)
