@@ -37,14 +37,7 @@ class Application(ft.Row):
     def __init__(self,page:ft.page):
         super().__init__()
         self.page=page
-        if page.session == None:
-            self.height=700
-            self.controls=[
-                ft.TextField("Login"),
-                ft.TextField("Password"),
-                ft.Button("Login")
-            ]
-        else:
+        if 'userlogin' in page.session
             rail = ft.NavigationRail(
                     selected_index=0,
                     label_type=ft.NavigationRailLabelType.ALL,
@@ -102,7 +95,13 @@ class Application(ft.Row):
                 ft.VerticalDivider(),
                 WelcomeView(),
                 ]
-
+        else:
+            self.height=700
+            self.controls=[
+                ft.TextField("Login"),
+                ft.TextField("Password"),
+                ft.Button("Login")
+            ]
     
 
        
