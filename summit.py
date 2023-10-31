@@ -110,7 +110,7 @@ class Application(ft.Row):
 def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
-    app=Application(user)
+    app=Application()
     page.add(app)
     page.update()
 
