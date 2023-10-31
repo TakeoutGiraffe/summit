@@ -37,7 +37,7 @@ class Application(ft.Row):
     def login_user(self,e):
         if self.login.value=="admin" and self.pwd.value=="dydx32&c":
             self.page.session.set('userlogin','admin')
-            self.build(self,self.page)
+            self.build(self.page)
         self.page.update()
 
     def build(self,page:ft.page):
