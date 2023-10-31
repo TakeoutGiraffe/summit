@@ -40,7 +40,7 @@ class Application(ft.Row):
             self.build(self,self.page)
         self.page.update()
 
-    def build(self,page:ft.page):
+    def build(page:ft.page):
         if page.session.contains_key("userlogin"):
             rail = ft.NavigationRail(
                     selected_index=0,
@@ -113,7 +113,7 @@ class Application(ft.Row):
     def __init__(self,page:ft.page):
         super().__init__()
         self.page=page
-        self.build(self,self.page)
+        self.build(self.page)
     
 
        
