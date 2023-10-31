@@ -100,7 +100,7 @@ class Application(ft.Row):
             self.controls=[
                 ft.TextField(label="Login"),
                 ft.TextField(label="Password"),
-                ft.Button("Login")
+                ft.ElevatedButton("Login")
             ]
     
 
