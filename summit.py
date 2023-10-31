@@ -103,8 +103,8 @@ class Application(ft.Row):
                 ]
         else:
             self.height=700
-            self.login = ft.TextField(label="Login"),
-            self.pwd=ft.TextField(label="Password",password=True),
+            self.login = ft.TextField(label="Login")
+            self.pwd=ft.TextField(label="Password",password=True)
             self.loginbtn=ft.ElevatedButton("Login",on_click=self.login_user)
             self.controls=[
                 self.login,
