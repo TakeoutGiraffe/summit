@@ -13,6 +13,7 @@ class ScriptItem(ft.Container):
         self.id = id
         self.parent = parent
         self.expand=True
+        self.bgcolor=ft.colors.WHITE
         cid = ft.Text(id)
         cname = ft.Text(name)
         crun = ft.IconButton(
@@ -34,7 +35,7 @@ class ScriptItem(ft.Container):
                         icon_size=40,
                         tooltip="Delete Script",
                     )
-        self.controls=[ft.Row(expand=True,bgcolor=ft.colors.WHITE,controls=[
+        self.controls=[ft.Row(expand=True,controls=[
             cid,
             cname,
             crun,
