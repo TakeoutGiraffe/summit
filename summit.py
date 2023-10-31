@@ -111,7 +111,7 @@ def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
     app=Application()
-    page.add(app)
+    page.add(page)
     page.update()
 
 ft.app(target=main)
