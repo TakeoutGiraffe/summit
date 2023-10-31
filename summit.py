@@ -98,8 +98,8 @@ class Application(ft.Row):
         else:
             self.height=700
             self.controls=[
-                ft.TextField("Login"),
-                ft.TextField("Password"),
+                ft.TextField(label="Login"),
+                ft.TextField(label="Password"),
                 ft.Button("Login")
             ]
     
