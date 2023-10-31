@@ -35,7 +35,7 @@ class Application(ft.Row):
                 self.switch_view(SettingsView())
     
     def login_user(self,e):
-        if login.value=="admin" and pwd.value="dydx32&c":
+        if login.value=="admin" and pwd.value=="dydx32&c":
             self.page.session.set('userlogin','admin')
         self.page.update()
 
