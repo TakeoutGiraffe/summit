@@ -37,7 +37,7 @@ class Application(ft.Row):
     def __init__(self,page:ft.page):
         super().__init__()
         self.page=page
-        if page.session['userid'] == Nothing:
+        if page.session == None:
             self.height=700
             self.controls=[
                 ft.TextField("Login"),
