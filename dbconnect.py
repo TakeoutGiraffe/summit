@@ -32,7 +32,12 @@ def connect():
           
     return conn
        
-  
+def execute(query):
+    print(query)
+    conn=connect()
+    cur=conn.cursor()
+    cur.execute(query)
+
 def get_query(query):
     print(query)
     conn=connect()
@@ -47,6 +52,9 @@ def get_script_with_id(id):
 
 def get_scripts():
     return get_query("SELECT scriptid,name FROM Scripts")
+
+def save_script(id, code):
+    return execute(f"UPDATE scripts SET code={code} where id={id}")
   
 if __name__ == '__main__': 
     k = get_scripts();
