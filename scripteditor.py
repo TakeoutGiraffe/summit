@@ -8,7 +8,7 @@ class ScriptEditorView(ft.Column):
 
     def __init__(self,script_id):
         super().__init__()
-
+        self.script_id = script_id
         script=db.get_script_with_id(script_id)[0]
         self.expand=True
         print(script)
