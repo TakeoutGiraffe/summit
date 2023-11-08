@@ -3,7 +3,7 @@ import dbconnect as db
 
 class ScriptEditorView(ft.Column):
 
-    def save_clicked(self):
+    def save_clicked(self,e):
         db.save_script(self.script_id, self.script_text.value)
 
     def __init__(self,script_id):
