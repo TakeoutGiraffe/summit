@@ -4,7 +4,7 @@ from scripteditor import ScriptEditorView
 
 class ScriptToolbar(ft.Row):
 
-    def __init__(self,parent,id,name):
+    def __init__(self,parent,id):
         super().__init__()
     
         def edit_script_clicked(e):
@@ -59,11 +59,12 @@ class ScriptsView(ft.Column):
             ft.DataColumn(ft.Text("Name")),
             ft.DataColumn(ft.Text("Tools"))
         ]
+        table.rows=[]
         for script in scripts:
             table.rows.append(ft.DataRow(cells=[
                 ft.DataCell(ft.Text(script[0])),
                 ft.DataCell(ft.Text(script[1])),
-                ft.DataCell(ScriptToolbar(script[0]))
+                ft.DataCell(ScriptToolbar(parent,script[0]))
             ]))
 
         self.controls=[header,ft.Divider(),table,footer]
