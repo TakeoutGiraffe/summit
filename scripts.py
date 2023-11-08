@@ -16,20 +16,20 @@ class ScriptToolbar(ft.Row):
         crun = ft.IconButton(
                         icon=ft.icons.PLAY_ARROW,
                         icon_color="green",
-                        icon_size=40,
+                        icon_size=20,
                         tooltip="Run Script",
                     )
         cedit = ft.IconButton(
                         icon=ft.icons.EDIT,
                         icon_color="blue400",
-                        icon_size=40,
+                        icon_size=20,
                         tooltip="Edit Script",
                         on_click=edit_script_clicked
                     )
         cdel = ft.IconButton(
                         icon=ft.icons.DELETE,
                         icon_color="red",
-                        icon_size=40,
+                        icon_size=20,
                         tooltip="Delete Script",
                     )
         self.controls=[
@@ -47,6 +47,7 @@ class ScriptsView(ft.Column):
 
         super().__init__()
         self.parent = parent
+        self.expand = True
         header = ft.Text("Scripts",size=36)
         scripts = db.get_scripts()
        
