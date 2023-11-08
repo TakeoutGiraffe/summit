@@ -37,6 +37,7 @@ def execute(query):
     conn=connect()
     cur=conn.cursor()
     cur.execute(query)
+    conn.commit()
 
 def get_query(query):
     print(query)
