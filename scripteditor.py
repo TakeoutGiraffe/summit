@@ -3,7 +3,7 @@ import dbconnect as db
 
 class ScriptEditorView(ft.Column):
 
-    def save_clicked():
+    def save_clicked(self):
         db.save_script(self.script_id, self.script_text.value)
 
     def __init__(self,script_id):
@@ -18,7 +18,7 @@ class ScriptEditorView(ft.Column):
             expand=True,
             value=script[2],
             multiline=True,
-            on_click = self.save_script
+            on_click = self.save_clicked
         )
 
         footer = ft.Row([ft.ElevatedButton("Save")  ])
