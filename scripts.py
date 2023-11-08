@@ -1,6 +1,7 @@
 import flet as ft
 import dbconnect as db
 from scripteditor import ScriptEditorView
+fron scriptoutput import ScriptOutputView
 
 class ScriptToolbar(ft.Row):
 
@@ -9,6 +10,9 @@ class ScriptToolbar(ft.Row):
     
         def edit_script_clicked(e):
             parent.switch_view(ScriptEditorView(id))
+
+        def run_script_clicked(e):
+            parent.switch_view(ScriptOutputView(id))
 
         self.id = id
         self.parent = parent
