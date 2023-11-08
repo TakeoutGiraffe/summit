@@ -22,6 +22,7 @@ class ScriptToolbar(ft.Row):
                         icon_color="green",
                         icon_size=20,
                         tooltip="Run Script",
+                        on_click=run_script_clicked
                     )
         cedit = ft.IconButton(
                         icon=ft.icons.EDIT,
