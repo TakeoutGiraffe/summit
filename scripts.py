@@ -53,13 +53,12 @@ class ScriptsView(ft.Column):
         footer = ft.Row([
             ft.ElevatedButton("New Script", on_click=self.new_script_clicked)   
         ])
-        table = ft.DataTable
+        table = ft.DataTable()
         table.columns=[
             ft.DataColumn(ft.Text("ID")),
             ft.DataColumn(ft.Text("Name")),
             ft.DataColumn(ft.Text("Tools"))
         ]
-        table.rows=[]
         for script in scripts:
             table.rows.append(ft.DataRow(cells=[
                 ft.DataCell(ft.Text(script[0])),
