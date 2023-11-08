@@ -12,7 +12,7 @@ class ScriptEditorView(ft.Column):
         header = ft.Text(script[1], size=36)
 
         script_text = ft.TextField(
-            expand=True
+            expand=True,
             value=script[2],
             multiline=True
         )
