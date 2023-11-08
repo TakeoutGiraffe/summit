@@ -17,9 +17,8 @@ class ScriptEditorView(ft.Column):
         self.script_text = ft.TextField(
             expand=True,
             value=script[2],
-            multiline=True,
-            on_click = self.save_clicked
+            multiline=True
         )
 
-        footer = ft.Row([ft.ElevatedButton("Save")  ])
+        footer = ft.Row([ft.ElevatedButton("Save", on_click=on_click = self.save_clicked)  ])
         self.controls=[header, script_text, footer]
