@@ -1,7 +1,7 @@
 import flet as ft
 import dbconnect as db
 from scripteditor import ScriptEditorView
-fron scriptoutput import ScriptOutputView
+from scriptoutput import ScriptOutputView
 
 class ScriptToolbar(ft.Row):
 
