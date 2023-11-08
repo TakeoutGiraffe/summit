@@ -54,7 +54,7 @@ def get_scripts():
     return get_query("SELECT scriptid,name FROM Scripts")
 
 def save_script(id, code):
-    return execute(f"UPDATE scripts SET code={code} where id={id}")
+    return execute(f"UPDATE scripts SET code={code} where id='{id}'")
   
 if __name__ == '__main__': 
     k = get_scripts();
