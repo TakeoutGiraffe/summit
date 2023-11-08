@@ -21,4 +21,4 @@ class ScriptEditorView(ft.Column):
         )
 
         footer = ft.Row([ft.ElevatedButton("Save", on_click = self.save_clicked)  ])
-        self.controls=[header, script_text, footer]
+        self.controls=[header, self.script_text, footer]
