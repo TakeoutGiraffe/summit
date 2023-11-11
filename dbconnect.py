@@ -61,7 +61,7 @@ def save_script(id, code):
 
 def add_task(id):
     runid = uuid.uuid4()
-    now = datatime.datetime.now()
+    now = datetime.datetime.now()
     return execute(f"INSERT INTO tasks (scriptid, starttime, status, runid) VALUES ({id,now,0,runid})")
   
 if __name__ == '__main__': 
