@@ -69,7 +69,7 @@ def get_pending_tasks():
     return get_query(f"SELECT taskid, status FROM tasks WHERE status=0")
 
 def set_task_status(taskid, newstatus):
-    execute("UPDATE tasks SET status={newstatus} WHERE taskid={taskid}")
+    execute(f"UPDATE tasks SET status={newstatus} WHERE taskid={taskid}")
 
 if __name__ == '__main__': 
     k = get_scripts();
