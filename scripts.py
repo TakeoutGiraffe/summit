@@ -48,7 +48,13 @@ class ScriptsView(ft.Column):
         self.new_script_dialog.open = False
         self.parent.page.update()
 
+    def confirm_new_script(self,e):
+        self.new_script_dialog.open = False
+        db.add_script(nst.value)
+        self.parent.page.update()
+
     def new_script_clicked(self,e):
+        self.nst=ft.TextField(label="Name"),
         self.page.dialog = self.new_script_dialog
         self.new_script_dialog.open = True
         self.parent.page.update()
@@ -64,9 +70,9 @@ class ScriptsView(ft.Column):
         self.new_script_dialog = ft.AlertDialog(
             modal=True,
             title=ft.Text("Create New Script"),
-            content=ft.TextField(label="Login"),
+            content=self.nst,
             actions=[
-                ft.TextButton("OK", on_click=self.close_dialog),
+                ft.TextButton("OK", on_click=self.confirm_new_script),
                 ft.TextButton("Cancel", on_click=self.close_dialog),
             ],
             actions_alignment=ft.MainAxisAlignment.END,

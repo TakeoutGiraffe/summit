@@ -120,9 +120,6 @@ class Application(ft.Row):
         self.taskmanager_thread.start()
         self.build(self.page)
     
-
-       
- 
 def main(page: ft.page):
     page.title = "Summit"
     page.padding = 0
