@@ -86,6 +86,9 @@ def set_task_output(taskid, output):
 def get_task_details(taskid):
     return get_query(f"SELECT s.scriptid,s.code FROM scripts s JOIN tasks t ON s.scriptid = t.scriptid")
 
+def get_task_output(taskid):
+    return get_query(f"SELECT output FROM tasks where taskid = {taskid}")
+
 if __name__ == '__main__': 
     k = get_scripts();
     print(k)

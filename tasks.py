@@ -1,16 +1,14 @@
 import flet as ft
 import dbconnect as db
+from taskout import TaskOutputView
 
 class TasksToolbar(ft.Row):
 
     def __init__(self,parent,id):
         super().__init__()
     
-        def edit_script_clicked(e):
-            parent.switch_view(ScriptEditorView(id))
-
-        def run_script_clicked(e):
-            db.add_task(id)
+        def script_output_clicked(e):
+            parent.switch_view(TaskOutputView(id))
 
         self.id = id
         self.parent = parent
@@ -20,7 +18,7 @@ class TasksToolbar(ft.Row):
                         icon_color="green",
                         icon_size=20,
                         tooltip="Script Output",
-                        on_click=run_script_clicked
+                        on_click=script_output_clicked
                     )
         self.controls=[
             coutput,
