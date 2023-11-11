@@ -69,7 +69,7 @@ def get_pending_tasks():
     return get_query(f"SELECT taskid, status FROM tasks WHERE status=0")
 
 def get_tasks_for_taskview():
-    return get_query(f"SELECT t.taskid, s.name, e.status, t.starttime, e.finishtime FROM tasks t JOIN scripts s ON t.scriptit = s.scriptid JOIN status_strings e on e.table='tasks' and e.field='status' and e.enumid = t.status")
+    return get_query(f"SELECT t.taskid, s.name, e.value, t.starttime, t.finishtime FROM tasks t JOIN scripts s ON t.scriptit = s.scriptid JOIN status_strings e on e.table='tasks' and e.field='status' and e.enumid = t.status")
 
 def set_task_start(taskid):
     execute(f"UPDATE tasks SET starttime=now() where taskid={taskid}")
