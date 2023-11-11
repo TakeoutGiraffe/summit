@@ -15,9 +15,10 @@ class Application(ft.Row):
     def __init__(self,page):
         super().__init__()
         self.page = page
+        print ("Initialising Application")
         self.taskmanager = TaskManager()
-        self.taskmanager_thread = t.Thread(target=self.taskmanager.loop)
-        self.taskmanager_thread.start()
+        #self.taskmanager_thread = t.Thread(target=self.taskmanager.loop)
+        #self.taskmanager_thread.start()
         
     def switch_view(self,view):
        del self.controls[2]
