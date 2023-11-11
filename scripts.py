@@ -54,7 +54,6 @@ class ScriptsView(ft.Column):
         self.parent.page.update()
 
     def new_script_clicked(self,e):
-        self.nst=ft.TextField(label="Name"),
         self.page.dialog = self.new_script_dialog
         self.new_script_dialog.open = True
         self.parent.page.update()
@@ -62,6 +61,7 @@ class ScriptsView(ft.Column):
     def __init__(self,parent):
 
         super().__init__()
+        self.nst=ft.TextField(label="Name"),
         self.parent = parent
         self.expand = True
         header = ft.Text("Scripts",size=36)
