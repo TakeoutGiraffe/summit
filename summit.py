@@ -26,7 +26,7 @@ class Application(ft.Row):
             elif e.control.selected_index == 1:
                 self.switch_view(ScriptsView(self))
             elif e.control.selected_index == 2:
-                self.switch_view(TasksView())
+                self.switch_view(TasksView(self))
             elif e.control.selected_index == 3:
                 self.switch_view(SchedulesView())
             elif e.control.selected_index == 4:
