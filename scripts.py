@@ -69,7 +69,7 @@ class ScriptsView(ft.Column):
         self.new_script_dialog = ft.AlertDialog(
             modal=True,
             title=ft.Text("Create New Script"),
-            content=ft.TextField(label="Name")
+            content=ft.TextField(label="Name"),
             actions=[
                 ft.TextButton("OK", on_click=self.confirm_new_script),
                 ft.TextButton("Cancel", on_click=self.close_dialog),
