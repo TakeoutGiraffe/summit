@@ -67,8 +67,8 @@ class ScriptsView(ft.Column):
         ]
         for script in scripts:
             table.rows.append(ft.DataRow(cells=[
-                ft.DataCell(ft.Text(script[0])),
-                ft.DataCell(ft.Text(script[1])),
+                ft.DataCell(ft.Text(script[0],)),
+                ft.DataCell(ft.Text(script[1],expand=True)),
                 ft.DataCell(ScriptToolbar(parent,script[0]))
             ]))
 
