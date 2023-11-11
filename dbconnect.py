@@ -60,7 +60,7 @@ def save_script(id, code):
     return execute(f"UPDATE scripts SET code='{code}' where scriptid={id}")
 
 def add_script(name):
-    execute(f"INSERT INTO scripts (name, code) VALUES ({name},'# It all starts with a bit of python.....')")
+    execute(f"INSERT INTO scripts (name, code) VALUES ('{name}','# It all starts with a bit of python.....')")
 
 def add_task(id):
     runid = uuid.uuid4()
