@@ -1,5 +1,7 @@
 import time
 import dbconnect as db
+import threading as t
+from taskrunner import TaskRunner
 
 class TaskManager:
 
@@ -13,7 +15,8 @@ class TaskManager:
 
             tasks = db.get_pending_tasks()
             for task in tasks:
-                db.set_task_status(task[0], 1)
+                tr = TaskRunner(task[0])
+                trf = t.Thread(target=tr.run)
 
             time.sleep(60)
         

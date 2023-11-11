@@ -5,4 +5,5 @@ class TaskRunner:
         self.task = task
         
     def run(self):
+        print(f"Starting Task {self.task}")
         db.set_task_status(self.task, 1)
