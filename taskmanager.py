@@ -1,4 +1,5 @@
 import time
+import dbconnect as db
 
 class TaskManager:
 
@@ -8,5 +9,10 @@ class TaskManager:
     def loop(self):
         while (self.quit == False):
             print("Checking for new tasks")
-            time.sleep(10)
+
+            tasks = db.get_pending_tasks()
+            for task in tasks:
+                db.set_taskStatus(task[0], 1)
+
+            time.sleep(60)
         

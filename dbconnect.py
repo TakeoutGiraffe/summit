@@ -62,8 +62,15 @@ def save_script(id, code):
 def add_task(id):
     runid = uuid.uuid4()
     now = datetime.datetime.now()
-    return execute(f"INSERT INTO tasks (scriptid, starttime, status, runid) VALUES ({id},'{now}',0,'{runid}')")
+    execute(f"INSERT INTO tasks (scriptid, starttime, status, runid) VALUES ({id},'{now}',0,'{runid}')")
+    return runid
   
+def get_pending_tasks():
+    return get_query(f"SELECT taskid, status FROM tasks WHERE status=0")
+
+def set_task_status(taskid, newstatus):
+    execute("UPDATE tasks SET status={newstatus} WHERE taskid={taskid}")
+
 if __name__ == '__main__': 
     k = get_scripts();
     print(k)
