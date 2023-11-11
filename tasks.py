@@ -63,7 +63,8 @@ class TasksView(ft.Column):
             ft.DataColumn(ft.Text("Script")),
             ft.DataColumn(ft.Text("Status")),
             ft.DataColumn(ft.Text("Started")),
-            ft.DataColumn(ft.Text("Finished"))
+            ft.DataColumn(ft.Text("Finished")),
+            ft.DataColumn(ft.Text("Tools"))
         ]
         for task in tasks:
             table.rows.append(ft.DataRow(cells=[
