@@ -12,8 +12,9 @@ import threading as t
  
 class Application(ft.Row):
 
-    def __init__(self):
+    def __init__(self,page):
         super().__init__()
+        self.page = page
         self.taskmanager = TaskManager()
         self.taskmanager_thread = t.Thread(target=self.taskmanager.loop)
         self.taskmanager_thread.start()
