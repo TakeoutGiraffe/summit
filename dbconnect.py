@@ -84,7 +84,7 @@ def set_task_output(taskid, output):
     execute(f"UPDATE tasks SET output='{output}' WHERE taskid={taskid}")
 
 def get_task_details(taskid):
-    return get_query(f"SELECT s.scriptid,s.code FROM scripts s JOIN tasks t ON s.scriptid = t.scriptid")
+    return get_query(f"SELECT s.scriptid,s.code FROM scripts s JOIN tasks t ON s.scriptid = t.scriptid WHERE taskid = {taskid}")
 
 def get_task_output(taskid):
     return get_query(f"SELECT t.taskid,t.output,s.name FROM tasks t JOIN scripts s ON t.scriptid = s.scriptid where taskid = {taskid}")
