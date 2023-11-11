@@ -16,7 +16,7 @@ class TaskRunner:
 
         f = StringIO()
         with redirect_stdout(f):
-            exec(details[1])
+            exec(details[0][1])
 
         s = f.getvalue()
 
