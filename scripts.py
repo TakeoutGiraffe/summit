@@ -59,7 +59,11 @@ class ScriptsView(ft.Column):
         footer = ft.Row([
             ft.ElevatedButton("New Script", on_click=self.new_script_clicked)   
         ])
-        table = ft.DataTable(expand=True)
+        table = ft.DataTable(
+            width=700,
+            bgcolor="white",
+            border=ft.border.all(2, "black"),
+        )
         table.columns=[
             ft.DataColumn(ft.Text("ID")),
             ft.DataColumn(ft.Text("Name")),
