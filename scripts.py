@@ -50,7 +50,7 @@ class ScriptsView(ft.Column):
 
     def confirm_new_script(self,e):
         self.new_script_dialog.open = False
-        db.add_script(nst.value)
+        db.add_script(self.new_script_dialog.content.value)
         self.parent.page.update()
 
     def new_script_clicked(self,e):
@@ -61,7 +61,6 @@ class ScriptsView(ft.Column):
     def __init__(self,parent):
 
         super().__init__()
-        self.nst=ft.TextField(label="Name"),
         self.parent = parent
         self.expand = True
         header = ft.Text("Scripts",size=36)
@@ -70,7 +69,7 @@ class ScriptsView(ft.Column):
         self.new_script_dialog = ft.AlertDialog(
             modal=True,
             title=ft.Text("Create New Script"),
-            content=ft.TextField(label="Name"),
+            content=ft.TextField(label="Name")
             actions=[
                 ft.TextButton("OK", on_click=self.confirm_new_script),
                 ft.TextButton("Cancel", on_click=self.close_dialog),
