@@ -6,7 +6,7 @@ class Scheduler:
         self.quit=False
 
     def loop(self):
-        while (self.quit):
+        while (self.quit == False):
             print("Checking for new tasks")
             time.sleep()
         
