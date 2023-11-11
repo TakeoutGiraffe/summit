@@ -1,4 +1,3 @@
-class TaskRunner(py):
+class TaskRunner:
     
     def __init__(self):
-        

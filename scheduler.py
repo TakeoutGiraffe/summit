@@ -8,5 +8,5 @@ class Scheduler:
     def loop(self):
         while (self.quit == False):
             print("Checking for new tasks")
-            time.sleep()
+            time.sleep(10)
         
