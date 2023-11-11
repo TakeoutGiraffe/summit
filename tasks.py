@@ -65,14 +65,14 @@ class TasksView(ft.Column):
             ft.DataColumn(ft.Text("Started")),
             ft.DataColumn(ft.Text("Fihished"))
         ]
-        for script in scripts:
+        for task in tasks:
             table.rows.append(ft.DataRow(cells=[
-                ft.DataCell(ft.Text(tasks[0],)),
-                ft.DataCell(ft.Text(tasks[1],)),
-                ft.DataCell(ft.Text(tasks[2],)),
-                ft.DataCell(ft.Text(tasks[3],)),
-                ft.DataCell(ft.Text(tasks[4],)),
-                ft.DataCell(ScriptToolbar(parent,tasks[0]))
+                ft.DataCell(ft.Text(task[0],)),
+                ft.DataCell(ft.Text(task[1],)),
+                ft.DataCell(ft.Text(task[2],)),
+                ft.DataCell(ft.Text(task[3],)),
+                ft.DataCell(ft.Text(task[4],)),
+                ft.DataCell(ScriptToolbar(parent,task[0]))
             ]))
 
         self.controls=[header,ft.Divider(),table,footer]
