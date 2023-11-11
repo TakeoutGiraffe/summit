@@ -13,8 +13,9 @@ import threading as t
 class Application(ft.Row):
 
     def __init__(self):
+        super().__init__()
         self.taskmanager = TaskManager()
-        self.taskmanager_thread = t.Thread(target=self.scheduler.loop)
+        self.taskmanager_thread = t.Thread(target=self.taskmanager.loop)
         self.taskmanager_thread.start()
         
     def switch_view(self,view):
