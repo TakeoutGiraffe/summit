@@ -53,25 +53,25 @@ class Application(ft.Row):
                     group_alignment=-0.9,
                     destinations=[
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="API Endpoints"
+                            icon=ft.icons.API, selected_icon=ft.icons.FAVORITE, label="API Endpoints"
                         ),
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Scripts"
+                            icon=ft.icons.DESCRIPTION, selected_icon=ft.icons.FAVORITE, label="Scripts"
                         ),
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Tasks"
+                            icon=ft.icons.TASK, selected_icon=ft.icons.FAVORITE, label="Tasks"
                         ),
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Schedules"
+                            icon=ft.icons.SCHEDULE, selected_icon=ft.icons.FAVORITE, label="Schedules"
                         ),
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Dashboards"
+                            icon=ft.icons.DASHBOARD, selected_icon=ft.icons.FAVORITE, label="Dashboards"
                         ),
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Security"
+                            icon=ft.icons.SECURITY, selected_icon=ft.icons.FAVORITE, label="Security"
                         ),
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Settings"
+                            icon=ft.icons.SETTINGS, selected_icon=ft.icons.FAVORITE, label="Settings"
                         ),
                     ],
                     on_change=self.new_screen_selected,
