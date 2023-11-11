@@ -1,6 +1,6 @@
 import time
 
-class Scheduler:
+class TaskManager:
 
     def __init__(self):
         self.quit=False

@@ -6,16 +6,16 @@ from security import SecurityView
 from settings import SettingsView
 from tasks import TasksView
 from welcome import WelcomeView
-#from scheduler import Scheduler
+from taskmanager import TaskManager
 import flet as ft
 import threading as t
  
 class Application(ft.Row):
 
     def __init__(self):
-        self.scheduler = Scheduler()
-        self.scheduler_thread = t.Thread(target=self.scheduler.loop)
-        self.scheduler_thread.start()
+        self.taskmanager = TaskManager()
+        self.taskmanager_thread = t.Thread(target=self.scheduler.loop)
+        self.taskmanager_thread.start()
         
     def switch_view(self,view):
        del self.controls[2]
