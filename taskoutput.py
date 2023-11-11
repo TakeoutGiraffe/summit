@@ -8,11 +8,11 @@ class TaskOutputView(ft.Column):
         self.script_id = task_id
         output=db.get_task_output(task_id)[0]
         self.expand=True
-        header = ft.Text(script[1], size=36)
+        header = ft.Text(output[1], size=36)
 
         self.script_text = ft.TextField(
             expand=True,
-            value=output,
+            value=output[2],
             multiline=True
         )
 
