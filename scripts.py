@@ -12,7 +12,7 @@ class ScriptToolbar(ft.Row):
             parent.switch_view(ScriptEditorView(id))
 
         def run_script_clicked(e):
-            parent.switch_view(ScriptOutputView(id))
+            db.add_task(id)
 
         self.id = id
         self.parent = parent

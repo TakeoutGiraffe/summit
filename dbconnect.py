@@ -1,6 +1,8 @@
 #!/usr/bin/python 
 from configparser import ConfigParser 
 import psycopg2 
+import uuid
+import datetime
   
   
 def config(filename='database.ini', section='postgresql'): 
@@ -56,6 +58,11 @@ def get_scripts():
 
 def save_script(id, code):
     return execute(f"UPDATE scripts SET code='{code}' where scriptid={id}")
+
+def add_task(id):
+    runid = uuid.uuid4()
+    now = datatime.datetime.now()
+    return execute(f"INSERT INTO tasks (scriptid, starttime, status, runid) VALUES ({id,now,0,runid})")
   
 if __name__ == '__main__': 
     k = get_scripts();
