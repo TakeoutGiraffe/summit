@@ -72,7 +72,7 @@ class TasksView(ft.Column):
                 ft.DataCell(ft.Text(task[2],)),
                 ft.DataCell(ft.Text(task[3],)),
                 ft.DataCell(ft.Text(task[4],)),
-                ft.DataCell(ScriptToolbar(parent,task[0]))
+                ft.DataCell(TasksToolbar(parent,task[0]))
             ]))
 
         self.controls=[header,ft.Divider(),table,footer]
