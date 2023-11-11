@@ -66,7 +66,7 @@ class ScriptsView(ft.Column):
             title=ft.Text("Create New Script"),
             content=ft.TextField(label="Login"),
             actions=[
-                ft.TextButton("OK", on_click=self.close_dialogg),
+                ft.TextButton("OK", on_click=self.close_dialog),
                 ft.TextButton("Cancel", on_click=self.close_dialog),
             ],
             actions_alignment=ft.MainAxisAlignment.END,
