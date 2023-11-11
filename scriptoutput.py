@@ -15,11 +15,6 @@ class ScriptOutputView(ft.Column):
         self.expand=True
         header = ft.Text(script[1], size=36)
 
-        f = StringIO()
-        with redirect_stdout(f):
-            exec(script[2])
-        s = f.getvalue()
-
         self.script_text = ft.TextField(
             expand=True,
             value=s,
