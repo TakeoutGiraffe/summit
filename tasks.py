@@ -15,30 +15,15 @@ class TasksToolbar(ft.Row):
         self.id = id
         self.parent = parent
         self.height=40
-        crun = ft.IconButton(
-                        icon=ft.icons.PLAY_ARROW,
+        coutput = ft.IconButton(
+                        icon=ft.icons.OUTPUT,
                         icon_color="green",
                         icon_size=20,
-                        tooltip="Run Script",
+                        tooltip="Script Output",
                         on_click=run_script_clicked
                     )
-        cedit = ft.IconButton(
-                        icon=ft.icons.EDIT,
-                        icon_color="blue400",
-                        icon_size=20,
-                        tooltip="Edit Script",
-                        on_click=edit_script_clicked
-                    )
-        cdel = ft.IconButton(
-                        icon=ft.icons.DELETE,
-                        icon_color="red",
-                        icon_size=20,
-                        tooltip="Delete Script",
-                    )
         self.controls=[
-            crun,
-            cedit,
-            cdel
+            coutput,
         ]
 
 class TasksView(ft.Column):
