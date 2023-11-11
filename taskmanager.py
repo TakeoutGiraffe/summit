@@ -11,7 +11,6 @@ class TaskManager:
 
     def loop(self):
         while (self.quit == False):
-            print("Checking for new tasks")
 
             tasks = db.get_pending_tasks()
             for task in tasks:

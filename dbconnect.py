@@ -35,14 +35,14 @@ def connect():
     return conn
        
 def execute(query):
-    print(query)
+    #print(query)
     conn=connect()
     cur=conn.cursor()
     cur.execute(query)
     conn.commit()
 
 def get_query(query):
-    print(query)
+    #print(query)
     conn=connect()
     cur=conn.cursor()
     cur.execute(query)
