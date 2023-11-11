@@ -13,7 +13,8 @@ import threading as t
 class Application(ft.Row):
 
     def __init__(self):
-        self.scheduler = Scheduler()
+        self.temp = 1
+        #self.scheduler = Scheduler()
         #self.scheduler_thread = t.Thread(target=self.scheduler.loop)
         #self.scheduler_thread.start()
         
