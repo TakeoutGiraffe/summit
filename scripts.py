@@ -44,8 +44,14 @@ class ScriptToolbar(ft.Row):
 
 class ScriptsView(ft.Column):
 
+    def close_dialog(e):
+        self.dialog.open = False
+        page.update()
+
     def new_script_clicked(self,e):
-        print("New Script")
+        page.dialog = self.dialog
+        self.dialog.open = True
+        page.update()
         
     def __init__(self,parent):
 
@@ -55,6 +61,17 @@ class ScriptsView(ft.Column):
         header = ft.Text("Scripts",size=36)
         scripts = db.get_scripts()
        
+        self.new_script_dialog = ft.AlertDialog(
+            modal=True,
+            title=ft.Text("Create New Script"),
+            content=ft.TextFIeld(ft.TextField(label="Login")),
+            actions=[
+                ft.TextButton("OK", on_click=close_dlg),
+                ft.TextButton("Cancel", on_click=close_dlg),
+            ],
+            actions_alignment=ft.MainAxisAlignment.END,
+        )
+
         footer = ft.Row([
             ft.ElevatedButton("New Script", on_click=self.new_script_clicked)   
         ])
