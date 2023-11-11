@@ -68,6 +68,12 @@ def add_task(id):
 def get_pending_tasks():
     return get_query(f"SELECT taskid, status FROM tasks WHERE status=0")
 
+def set_task_start(taskid):
+    execute(f"UPDATE tasks SET starttime=now() where taskid={taskid}")
+
+def set_task_finish(taskid):
+    execute(f"UPDATE tasks SET finishtime=now() where taskid={taskid}")
+
 def set_task_status(taskid, newstatus):
     execute(f"UPDATE tasks SET status={newstatus} WHERE taskid={taskid}")
 

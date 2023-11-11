@@ -19,5 +19,5 @@ class TaskManager:
                 trf = t.Thread(target=tr.run)
                 trf.start()
 
-            time.sleep(60)
+            time.sleep(5)
         
