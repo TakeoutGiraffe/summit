@@ -6,7 +6,7 @@ from security import SecurityView
 from settings import SettingsView
 from tasks import TasksView
 from welcome import WelcomeView
-from scheduler import Scheduler
+#from scheduler import Scheduler
 import flet as ft
 import threading as t
  
