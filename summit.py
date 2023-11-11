@@ -59,7 +59,7 @@ class Application(ft.Row):
                             icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Scripts"
                         ),
                         ft.NavigationRailDestination(
-                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Running Tasks"
+                            icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Tasks"
                         ),
                         ft.NavigationRailDestination(
                             icon=ft.icons.FAVORITE_BORDER, selected_icon=ft.icons.FAVORITE, label="Schedules"
