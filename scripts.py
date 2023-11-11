@@ -44,14 +44,14 @@ class ScriptToolbar(ft.Row):
 
 class ScriptsView(ft.Column):
 
-    def close_dialog(e):
+    def close_dialog(self,e):
         self.new_script_dialog.open = False
-        page.update()
+        self.parent.page.update()
 
     def new_script_clicked(self,e):
-        page.dialog = self.new_script_dialog
+        self.page.dialog = self.new_script_dialog
         self.new_script_dialog.open = True
-        page.update()
+        self.parent.page.update()
         
     def __init__(self,parent):
 
