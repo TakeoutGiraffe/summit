@@ -11,7 +11,7 @@ class TaskRunner:
         db.set_task_status(self.task, 1)
         db.set_task_start(self.task)
 
-        details = get_task_details(self.task)
+        details = db.get_task_details(self.task)
 
         f = StringIO()
         with redirect_stdout(f):
