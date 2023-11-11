@@ -60,7 +60,7 @@ class ScriptsView(ft.Column):
             ft.ElevatedButton("New Script", on_click=self.new_script_clicked)   
         ])
         table = ft.DataTable(
-            width=700,
+            width=1000,
             bgcolor="white",
             border=ft.border.all(2, "black"),
         )

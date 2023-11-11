@@ -54,7 +54,7 @@ class TasksView(ft.Column):
         footer = ft.Row([
         ])
         table = ft.DataTable(
-            width=700,
+            width=1000,
             bgcolor="white",
             border=ft.border.all(2, "black"),
         )
