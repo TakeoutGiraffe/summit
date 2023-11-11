@@ -49,7 +49,7 @@ class TasksView(ft.Column):
         self.parent = parent
         self.expand = True
         header = ft.Text("Tasks",size=36)
-        scripts = db.get_scripts()
+        tasks = db.get_tasks_for_taskview()
        
         footer = ft.Row([
         ])
@@ -67,12 +67,12 @@ class TasksView(ft.Column):
         ]
         for script in scripts:
             table.rows.append(ft.DataRow(cells=[
-                ft.DataCell(ft.Text(script[0],)),
-                ft.DataCell(ft.Text(script[1],)),
-                ft.DataCell(ft.Text(script[2],)),
-                ft.DataCell(ft.Text(script[3],)),
-                ft.DataCell(ft.Text(script[4],)),
-                ft.DataCell(ScriptToolbar(parent,script[0]))
+                ft.DataCell(ft.Text(tasks[0],)),
+                ft.DataCell(ft.Text(tasks[1],)),
+                ft.DataCell(ft.Text(tasks[2],)),
+                ft.DataCell(ft.Text(tasks[3],)),
+                ft.DataCell(ft.Text(tasks[4],)),
+                ft.DataCell(ScriptToolbar(parent,tasks[0]))
             ]))
 
         self.controls=[header,ft.Divider(),table,footer]
