@@ -5,6 +5,7 @@ class TaskManager:
 
     def __init__(self):
         self.quit=False
+        print("Task Manager initialilised")
 
     def loop(self):
         while (self.quit == False):
