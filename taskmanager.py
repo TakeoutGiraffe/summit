@@ -13,7 +13,7 @@ class TaskManager:
 
             tasks = db.get_pending_tasks()
             for task in tasks:
-                db.set_taskStatus(task[0], 1)
+                db.set_task_status(task[0], 1)
 
             time.sleep(60)
         
