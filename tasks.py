@@ -54,7 +54,7 @@ class TasksView(ft.Column):
         footer = ft.Row([
         ])
         table = ft.DataTable(
-            width=1000,
+            width=1200,
             bgcolor="white",
             border=ft.border.all(2, "black"),
         )
@@ -63,7 +63,7 @@ class TasksView(ft.Column):
             ft.DataColumn(ft.Text("Script")),
             ft.DataColumn(ft.Text("Status")),
             ft.DataColumn(ft.Text("Started")),
-            ft.DataColumn(ft.Text("Fihished"))
+            ft.DataColumn(ft.Text("Finished"))
         ]
         for task in tasks:
             table.rows.append(ft.DataRow(cells=[
