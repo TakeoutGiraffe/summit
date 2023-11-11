@@ -13,6 +13,7 @@ class TaskRunner:
         db.set_task_start(self.task)
 
         details = db.get_task_details(self.task)
+        print(details)
 
         f = StringIO()
         with redirect_stdout(f):
