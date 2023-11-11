@@ -17,6 +17,7 @@ class TaskManager:
             for task in tasks:
                 tr = TaskRunner(task[0])
                 trf = t.Thread(target=tr.run)
+                trf.start()
 
             time.sleep(60)
         
