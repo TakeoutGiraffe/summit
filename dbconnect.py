@@ -62,7 +62,7 @@ def save_script(id, code):
 def add_task(id):
     runid = uuid.uuid4()
     now = datetime.datetime.now()
-    execute(f"INSERT INTO tasks (scriptid, starttime, status, runid) VALUES ({id},'{now}',0,'{runid}')")
+    execute(f"INSERT INTO tasks (scriptid, status, runid) VALUES ({id},0,'{runid}')")
     return runid
   
 def get_pending_tasks():
